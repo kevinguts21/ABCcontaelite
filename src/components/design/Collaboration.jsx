@@ -19,3 +19,4 @@ export const LeftCurve = () => {
     </div>
   );
 };
+//123123
