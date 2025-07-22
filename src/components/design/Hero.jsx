@@ -1,8 +1,10 @@
+// Componentes decorativos para la sección Hero
 import { useEffect, useState } from "react";
 import { MouseParallax } from "react-just-parallax";
 
 import PlusSvg from "../../assets/svg/PlusSvg";
 
+// Gradiente decorativo en la parte inferior del Hero
 export const Gradient = () => {
   return (
     <>
@@ -12,6 +14,7 @@ export const Gradient = () => {
   );
 };
 
+// Línea y símbolos decorativos en la parte inferior del Hero
 export const BottomLine = () => {
   return (
     <>

@@ -1,3 +1,5 @@
+// Componente que muestra el roadmap del producto
+// Renderiza tarjetas con fecha, estado, imagen, título y descripción
 import Button from "./Button";
 import Heading from "./Heading";
 import Section from "./Section";
@@ -9,8 +11,10 @@ import { Gradient } from "./design/Roadmap";
 const Roadmap = () => (
   <Section className="overflow-hidden" id="roadmap">
     <div className="container md:pb-10">
+      {/* Título y subtítulo */}
       <Heading tag="Ready to get started" title="What we’re working on" />
 
+      {/* Grid de tarjetas del roadmap */}
       <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
         {roadmap.map((item) => {
           const status = item.status === "done" ? "Done" : "In progress";
@@ -22,7 +26,9 @@ const Roadmap = () => (
               }`}
               key={item.id}
             >
+              {/* Tarjeta individual del roadmap */}
               <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
+                {/* Fondo decorativo de grid */}
                 <div className="absolute top-0 left-0 max-w-full">
                   <img
                     className="w-full"
@@ -33,6 +39,7 @@ const Roadmap = () => (
                   />
                 </div>
                 <div className="relative z-1">
+                  {/* Fecha y estado */}
                   <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
                     <Tagline>{item.date}</Tagline>
 

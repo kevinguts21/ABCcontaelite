@@ -1,3 +1,5 @@
+// Componente decorativo para el fondo de la sección Roadmap
+// Genera un gradiente visual como fondo
 import { gradient } from "../../assets";
 
 export const Gradient = () => {

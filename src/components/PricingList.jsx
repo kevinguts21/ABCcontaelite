@@ -1,3 +1,5 @@
+// Componente que muestra la lista de planes de precios
+// Cada tarjeta incluye título, descripción, precio, botón y características
 import { check } from "../assets";
 import { pricing } from "../constants";
 import Button from "./Button";
@@ -10,12 +12,15 @@ const PricingList = () => {
           key={item.id}
           className="w-[19rem] max-lg:w-full h-full px-6 bg-n-8 border border-n-6 rounded-[2rem] lg:w-auto even:py-14 odd:py-8 odd:my-4 [&>h4]:first:text-color-2 [&>h4]:even:text-color-1 [&>h4]:last:text-color-3"
         >
+          {/* Título del plan */}
           <h4 className="h4 mb-4">{item.title}</h4>
 
+          {/* Descripción del plan */}
           <p className="body-2 min-h-[4rem] mb-3 text-n-1/50">
             {item.description}
           </p>
 
+          {/* Precio del plan */}
           <div className="flex items-center h-[5.5rem] mb-6">
             {item.price && (
               <>
@@ -27,6 +32,7 @@ const PricingList = () => {
             )}
           </div>
 
+          {/* Botón de acción */}
           <Button
             className="w-full mb-6"
             href={item.price ? "/pricing" : "mailto:contact@jsmastery.pro"}
@@ -35,6 +41,7 @@ const PricingList = () => {
             {item.price ? "Get started" : "Contact us"}
           </Button>
 
+          {/* Lista de características */}
           <ul>
             {item.features.map((feature, index) => (
               <li

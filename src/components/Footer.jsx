@@ -1,3 +1,5 @@
+
+// Componente Footer: Pie de página con derechos de autor y enlaces a redes sociales
 import React from "react";
 import Section from "./Section";
 import { socials } from "../constants";
@@ -6,10 +8,12 @@ const Footer = () => {
   return (
     <Section crosses className="!px-0 !py-10">
       <div className="container flex sm:justify-between justify-center items-center gap-10 max-sm:flex-col">
+        {/* Texto de derechos de autor */}
         <p className="caption text-n-4 lg:block">
           © {new Date().getFullYear()}. All rights reserved.
         </p>
 
+        {/* Lista de iconos de redes sociales */}
         <ul className="flex gap-5 flex-wrap">
           {socials.map((item) => (
             <a

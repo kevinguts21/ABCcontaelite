@@ -1,13 +1,16 @@
+// Componente para mostrar notificaciones visuales
+// Muestra imagen, título, lista de usuarios y tiempo transcurrido
 import { notification1 } from "../assets";
 import { notificationImages } from "../constants";
 
 const Notification = ({ className, title }) => {
   return (
     <div
-      className={`${
+      className={`$${
         className || ""
       } flex items-center p-4 pr-6 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl gap-5`}
     >
+      {/* Imagen principal de la notificación */}
       <img
         src={notification1}
         width={62}
@@ -17,9 +20,11 @@ const Notification = ({ className, title }) => {
       />
 
       <div className="flex-1">
+        {/* Título de la notificación */}
         <h6 className="mb-1 font-semibold text-base">{title}</h6>
 
         <div className="flex items-center justify-between">
+          {/* Lista de usuarios involucrados */}
           <ul className="flex -m-0.5">
             {notificationImages.map((item, index) => (
               <li
@@ -36,6 +41,7 @@ const Notification = ({ className, title }) => {
               </li>
             ))}
           </ul>
+          {/* Tiempo transcurrido */}
           <div className="body-2 text-n-13">1m ago</div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+
+// Componente que muestra un mensaje de carga de IA
 import { loading } from "../assets";
 
 const Generating = ({ className }) => {
@@ -7,7 +9,9 @@ const Generating = ({ className }) => {
         className || ""
       } text-base`}
     >
+      {/* Icono de carga */}
       <img className="w-5 h-5 mr-4" src={loading} alt="Loading" />
+      {/* Texto de estado */}
       AI is generating
     </div>
   );

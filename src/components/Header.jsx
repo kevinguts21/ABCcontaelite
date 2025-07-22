@@ -1,3 +1,6 @@
+
+// Componente Header: barra de navegación superior fija
+// Incluye logo, enlaces, botones y menú hamburguesa para móviles
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
@@ -12,6 +15,7 @@ const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
 
+  // Abre/cierra el menú de navegación móvil y bloquea/desbloquea el scroll
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
@@ -22,6 +26,7 @@ const Header = () => {
     }
   };
 
+  // Cierra el menú al hacer click en un enlace
   const handleClick = () => {
     if (!openNavigation) return;
 
@@ -36,10 +41,12 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+        {/* Logo principal */}
         <a className="block w-[12rem] xl:mr-8" href="#hero">
           <img src={brainwave} width={190} height={40} alt="Brainwave" />
         </a>
 
+        {/* Navegación principal */}
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
@@ -64,19 +71,23 @@ const Header = () => {
             ))}
           </div>
 
+          {/* Menú hamburguesa para móviles */}
           <HamburgerMenu />
         </nav>
 
+        {/* Botón para crear cuenta nueva */}
         <a
           href="#signup"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
           New account
         </a>
+        {/* Botón de inicio de sesión */}
         <Button className="hidden lg:flex" href="#login">
           Sign in
         </Button>
 
+        {/* Botón para abrir/cerrar menú móvil */}
         <Button
           className="ml-auto lg:hidden"
           px="px-3"

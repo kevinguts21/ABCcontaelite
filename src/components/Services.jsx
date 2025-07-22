@@ -1,3 +1,5 @@
+// Componente que muestra los servicios principales de la app
+// Incluye imágenes, listas de características y componentes decorativos
 import Section from "./Section";
 import Heading from "./Heading";
 import { service1, service2, service3, check } from "../assets";
@@ -15,12 +17,14 @@ const Services = () => {
   return (
     <Section id="how-to-use">
       <div className="container">
+        {/* Título y subtítulo */}
         <Heading
           title="Generative AI made for creators."
           text="Brainwave unlocks the potential of AI-powered applications"
         />
 
         <div className="relative">
+          {/* Primer bloque: Smartest AI */}
           <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
               <img
@@ -33,10 +37,12 @@ const Services = () => {
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
+              {/* Título y descripción del servicio */}
               <h4 className="h4 mb-4">Smartest AI</h4>
               <p className="body-2 mb-[3rem] text-n-3">
                 Brainwave unlocks the potential of AI-powered applications
               </p>
+              {/* Lista de características */}
               <ul className="body-2">
                 {brainwaveServices.map((item, index) => (
                   <li

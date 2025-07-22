@@ -1,11 +1,15 @@
+
+// Componente que muestra los logos de empresas que usan el producto
 import { companyLogos } from "../constants";
 
 const CompanyLogos = ({ className }) => {
   return (
     <div className={className}>
+      {/* Texto introductorio */}
       <h5 className="tagline mb-6 text-center text-n-1/50">
         Helping people create beautiful content at
       </h5>
+      {/* Lista horizontal de logos */}
       <ul className="flex">
         {companyLogos.map((logo, index) => (
           <li

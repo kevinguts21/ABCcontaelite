@@ -1,5 +1,8 @@
+// Componentes decorativos para el header
+// Incluyen anillos, líneas laterales, círculos de fondo y menú hamburguesa
 import { background } from "../../assets";
 
+// Anillos decorativos en el header
 export const Rings = () => {
   return (
     <div className="absolute top-1/2 left-1/2 w-[51.375rem] aspect-square border border-n-2/10 rounded-full -translate-x-1/2 -translate-y-1/2">
@@ -9,6 +12,7 @@ export const Rings = () => {
   );
 };
 
+// Líneas laterales decorativas
 export const SideLines = () => {
   return (
     <>
@@ -18,6 +22,7 @@ export const SideLines = () => {
   );
 };
 
+// Círculos de fondo decorativos
 export const BackgroundCircles = () => {
   return (
     <>
@@ -28,6 +33,7 @@ export const BackgroundCircles = () => {
   );
 };
 
+// Fondo decorativo para el menú hamburguesa en mobile
 export const HamburgerMenu = () => {
   return (
     <div className="absolute inset-0 pointer-events-none lg:hidden">

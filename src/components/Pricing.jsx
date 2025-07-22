@@ -1,3 +1,5 @@
+// Componente que muestra la sección de precios
+// Incluye decoraciones visuales, título, lista de planes y enlace a detalles
 import Section from "./Section";
 import { smallSphere, stars } from "../assets";
 import Heading from "./Heading";
@@ -8,6 +10,7 @@ const Pricing = () => {
   return (
     <Section className="overflow-hidden" id="pricing">
       <div className="container relative z-2">
+        {/* Decoraciones visuales: esfera y estrellas */}
         <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
           <img
             src={smallSphere}
@@ -27,11 +30,13 @@ const Pricing = () => {
           </div>
         </div>
 
+        {/* Título y subtítulo */}
         <Heading
           tag="Get started with Brainwave"
           title="Pay once, use forever"
         />
 
+        {/* Lista de precios y líneas decorativas */}
         <div className="relative">
           <PricingList />
           <LeftLine />
