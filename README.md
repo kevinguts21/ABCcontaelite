@@ -708,7 +708,7 @@ export const socials = [
   {
     id: "4",
     title: "Facebook",
-    iconUrl: facebook,
+    iconUrl: "https://www.facebook.com/share/1CDiXFHVKh/?mibextid=wwXIfr",
     url: "#",
   },
 ];

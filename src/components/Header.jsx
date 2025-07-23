@@ -75,17 +75,17 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        {/* Botón para crear cuenta nueva */}
-        <a
+        {/* Botones de acción crear cuenta y iniciar sesion */}
+        {/* <a
           href="#signup"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
           New account
         </a>
-        {/* Botón de inicio de sesión */}
+    
         <Button className="hidden lg:flex" href="#login">
           Sign in
-        </Button>
+        </Button> */}
 
         {/* Botón para abrir/cerrar menú móvil */}
         <Button
