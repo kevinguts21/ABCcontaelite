@@ -33,6 +33,7 @@ import {
   telegram,
   x,
   yourlogo,
+  whatsapp,
 } from "../assets";
 
 export const navigation = [
@@ -317,5 +318,11 @@ export const socials = [
     title: "Facebook",
     iconUrl: facebook,
     url: "https://www.facebook.com/share/1CDiXFHVKh/?mibextid=wwXIfr",
+  },
+  {
+    id: "4",
+    title: "Whatsapp",
+    iconUrl: whatsapp,
+    url: "#",
   },
 ];
