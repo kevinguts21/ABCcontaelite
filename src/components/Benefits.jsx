@@ -1,4 +1,3 @@
-
 // Componente que muestra la sección de beneficios de la app
 // Renderiza tarjetas con título, texto, icono y fondo decorativo
 import { benefits } from "../constants";
@@ -14,7 +13,7 @@ const Benefits = () => {
       <div className="container relative z-2">
         {/* Título de la sección */}
         <Heading
-          className="md:max-w-md lg:max-w-2xl"
+          className="md:max-w-md lg:max-w-2xl font-bold text-black"
           title="Chat Smarter, Not Harder with Brainwave"
         />
 
@@ -30,8 +29,8 @@ const Benefits = () => {
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 {/* Título y texto del beneficio */}
-                <h5 className="h5 mb-5">{item.title}</h5>
-                <p className="body-2 mb-6 text-n-3">{item.text}</p>
+                <h5 className="h5 mb-5 font-bold ">{item.title}</h5>
+                <p className="body-2 mb-6 font-bold ">{item.text}</p>
                 {/* Icono y enlace decorativo */}
                 <div className="flex items-center mt-auto">
                   <img
@@ -40,7 +39,7 @@ const Benefits = () => {
                     height={48}
                     alt={item.title}
                   />
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                  <p className="ml-auto font-code text-xs font-bold uppercase tracking-wider">
                     Explore more
                   </p>
                   <Arrow />

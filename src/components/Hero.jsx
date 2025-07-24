@@ -1,4 +1,3 @@
-
 // Componente principal de la landing page (Hero)
 // Muestra título, descripción, botón, imagen principal, animaciones y logos
 import { curve, heroBackground, robot } from "../assets";
@@ -26,9 +25,9 @@ const Hero = () => {
       <div className="container relative" ref={parallaxRef}>
         {/* Título, descripción y botón principal */}
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6">
+          <h1 className="h1 mb-6 text-black font-bold ">
             Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
-            <span className="inline-block relative">
+            <span className="inline-block relative text-black font-bold">
               Brainwave{" "}
               <img
                 src={curve}
@@ -39,7 +38,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-black font-bold lg:mb-8">
             Unleash the power of AI within Brainwave. Upgrade your productivity
             with Brainwave, the open AI chat app.
           </p>
@@ -62,9 +61,6 @@ const Hero = () => {
                   height={490}
                   alt="AI"
                 />
-
-                {/* Mensaje de generación de IA */}
-                <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
                 {/* Animaciones y notificaciones con parallax */}
                 <ScrollParallax isAbsolutelyPositioned>
