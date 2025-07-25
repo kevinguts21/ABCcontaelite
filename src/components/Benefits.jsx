@@ -29,8 +29,8 @@ const Benefits = () => {
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 {/* Título y texto del beneficio */}
-                <h5 className="h5 mb-5 font-bold ">{item.title}</h5>
-                <p className="body-2 mb-6 font-bold ">{item.text}</p>
+                <h5 className="h5 mb-5 font-bold text-black">{item.title}</h5>
+                <p className="body-2 mb-6 font-bold text-black">{item.text}</p>
                 {/* Icono y enlace decorativo */}
                 <div className="flex items-center mt-auto">
                   <img
@@ -39,7 +39,7 @@ const Benefits = () => {
                     height={48}
                     alt={item.title}
                   />
-                  <p className="ml-auto font-code text-xs font-bold uppercase tracking-wider">
+                  <p className="ml-auto font-code text-xs font-bold text-black uppercase tracking-wider">
                     Explore more
                   </p>
                   <Arrow />
