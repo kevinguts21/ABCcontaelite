@@ -14,7 +14,7 @@ const Benefits = () => {
         {/* Título de la sección */}
         <Heading
           className="md:max-w-md lg:max-w-2xl font-bold text-black"
-          title="Chat Smarter, Not Harder with Brainwave"
+          title="Lleva tu contabilidad más allá con soluciones inteligentes"
         />
 
         {/* Renderiza cada tarjeta de beneficio */}
@@ -40,7 +40,7 @@ const Benefits = () => {
                     alt={item.title}
                   />
                   <p className="ml-auto font-code text-xs font-bold text-black uppercase tracking-wider">
-                    Explore more
+                   Descubre más
                   </p>
                   <Arrow />
                 </div>
@@ -51,7 +51,7 @@ const Benefits = () => {
 
               {/* Imagen de fondo con efecto hover */}
               <div
-                className="absolute inset-0.5 bg-n-8"
+                className="absolute inset-0.5 bg-white/80"
                 style={{ clipPath: "url(#benefits)" }}
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
