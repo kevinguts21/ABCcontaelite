@@ -1,4 +1,3 @@
-
 // Componente que muestra la sección de colaboración
 // Presenta beneficios, botón de acción y gráfico circular con apps colaborativas
 import { brainwaveSymbol, check } from "../assets";
@@ -13,7 +12,7 @@ const Collaboration = () => {
       <div className="container lg:flex">
         {/* Columna izquierda: beneficios y botón */}
         <div className="max-w-[25rem]">
-          <h2 className="h2 mb-4 md:mb-8">
+          <h2 className="h2 mb-4 md:mb-8 text-black">
             AI Chat App for seamless collaboration
           </h2>
 
@@ -23,11 +22,11 @@ const Collaboration = () => {
               <li className="mb-3 py-3" key={item.id}>
                 <div className="flex items-center">
                   <img src={check} width={24} height={24} alt="check" />
-                  <h6 className="body-2 ml-5">{item.title}</h6>
+                  <h6 className="body-2 ml-5 text-black">{item.title}</h6>
                 </div>
                 {/* Texto adicional del beneficio */}
                 {item.text && (
-                  <p className="body-2 mt-3 text-n-4">{item.text}</p>
+                  <p className="body-2 mt-3 text-gray-700">{item.text}</p>
                 )}
               </li>
             ))}
@@ -39,7 +38,7 @@ const Collaboration = () => {
 
         {/* Columna derecha: gráfico circular y apps colaborativas */}
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
-          <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
+          <p className="body-2 mb-8 text-gray-700 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
             {collabText}
           </p>
 

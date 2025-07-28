@@ -3,7 +3,12 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./public/assets/**/*.{js,ts,jsx,tsx}",
+  ],
+
   theme: {
     extend: {
       colors: {
@@ -13,7 +18,7 @@ export default {
           3: "#FF8A8F",
         },
         stroke: {
-          1: "#E1242A",
+          1: "#757185",
         },
         n: {
           1: "#FFFFFF",
@@ -66,7 +71,7 @@ export default {
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
         "conic-gradient":
-          "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+          "conic-gradient(from 225deg, #e1242a, #fff, #e1242a, #fff, #e1242a)",
       },
     },
   },
