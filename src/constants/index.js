@@ -34,6 +34,7 @@ import {
   x,
   yourlogo,
   whatsapp,
+  gmail,
 } from "../assets";
 
 export const navigation = [
@@ -324,6 +325,12 @@ export const socials = [
     id: "4",
     title: "Whatsapp",
     iconUrl: whatsapp,
-    url: "#",
+    url: "https://wa.me/+5354638504",
+  },
+  {
+    id: "5",
+    title: "Gmail",
+    iconUrl: gmail,
+    url: "mailto:abccontaelite.oficial@gmail.com",
   },
 ];

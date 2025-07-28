@@ -75,6 +75,7 @@ import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import x from "./socials/x.svg";
 import whatsapp from "./socials/whatsapp.svg";
+import gmail from "./socials/gmail.svg"; 
 
 export {
   abc_logo,
@@ -146,4 +147,5 @@ export {
   telegram,
   x,
   whatsapp,
+  gmail,
 };
