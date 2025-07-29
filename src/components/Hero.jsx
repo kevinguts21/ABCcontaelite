@@ -44,7 +44,7 @@ const Hero = () => {
             Unleash the power of AI within Brainwave. Upgrade your productivity
             with Brainwave, the open AI chat app.
           </p>
-          <Button href="/pricing" white>
+          <Button href="#pricing" white>
             Get started
           </Button>
         </div>
@@ -88,7 +88,8 @@ const Hero = () => {
             <Gradient />
           </div>
           {/* Fondo decorativo detrás del robot */}
-          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+
+          {/* <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
               src={heroBackground}
               className="w-full"
@@ -96,7 +97,7 @@ const Hero = () => {
               height={1800}
               alt="hero"
             />
-          </div>
+          </div> */}
 
           {/* Círculos decorativos */}
           <BackgroundCircles />
@@ -104,6 +105,7 @@ const Hero = () => {
 
         {/* Logos de empresas */}
         <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
+        
       </div>
 
       {/* Línea decorativa inferior */}
