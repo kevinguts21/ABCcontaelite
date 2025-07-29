@@ -79,9 +79,9 @@ export const notificationImages = [notification4, notification3, notification2];
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
 export const brainwaveServices = [
-  "Photo generating",
-  "Photo enhance",
-  "Seamless Integration",
+  "Gestión precisa",
+  "Cumplimiento legal",
+  "Asesoramiento personalizado",
 ];
 
 export const brainwaveServicesIcons = [
@@ -331,6 +331,7 @@ export const socials = [
     id: "5",
     title: "Gmail",
     iconUrl: gmail,
-    url: "mailto:abccontaelite.oficial@gmail.com",
+    url: "https://mail.google.com/mail/?view=cm&fs=1&to=abccontaelite.oficial@gmail.com"
+
   },
 ];

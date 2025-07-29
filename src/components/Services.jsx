@@ -19,13 +19,20 @@ const Services = () => {
       <div className="container">
         {/* Título y subtítulo */}
         <Heading
-          title="Generative AI made for creators."
-          text="Brainwave unlocks the potential of AI-powered applications"
+          title="Soluciones hechas para la contabilidad."
+          text={
+            <>
+              En <span style={{ color: "red" }}>ABC ContaElite</span>{" "}
+              potenciamos tu crecimiento financiero con asesoría contable
+              personalizada y herramientas inteligentes que simplifican tu
+              gestión
+            </>
+          }
         />
 
         <div className="relative">
           {/* Primer bloque: Smartest AI */}
-          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
+          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-8/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
               <img
                 className="w-full h-full object-cover md:object-right"
@@ -38,16 +45,20 @@ const Services = () => {
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
               {/* Título y descripción del servicio */}
-                    <h4 className="h4 mb-4 text-black font-bold">Smartest AI</h4>
-                    <p className="body-2 mb-[3rem] text-black font-bold">
-                      Brainwave unlocks the potential of AI-powered applications
-                    </p>
+              <h4 className="h4 mb-4 text-black font-bold">
+                La contabilidad más eficaz
+              </h4>
+              <p className="body-2 mb-[3rem] text-black font-bold">
+                ContaElite potencia tu gestión financiera con soluciones
+                avanzadas y confiables
+              </p>
+
               {/* Lista de características */}
               <ul className="body-2">
                 {brainwaveServices.map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-start py-4 border-t border-n-6"
+                    className="flex items-start py-4 border-t border-n-4"
                   >
                     <img width={24} height={24} src={check} />
                     <p className="ml-4 text-black font-bold">{item}</p>
@@ -56,27 +67,36 @@ const Services = () => {
               </ul>
             </div>
 
-            <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
+            <Generating className="absolute left-4 right-4 bottom-4 border-n-8/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
           </div>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
-            <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
+            <div className="relative min-h-[39rem] border border-n-8/10 rounded-3xl overflow-hidden">
               <div className="absolute inset-0">
                 <img
                   src={service2}
                   className="h-full w-full object-cover"
                   width={630}
                   height={750}
-                  alt="robot"
+                  alt="count"
                 />
               </div>
 
-              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                      <h4 className="h4 mb-4 text-black font-bold">Photo editing</h4>
-                      <p className="body-2 mb-[3rem] text-black font-bold">
-                        Automatically enhance your photos using our AI app&apos;s
-                        photo editing feature. Try it now!
-                      </p>
+              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 via-n-8/90 via-[70%] to-n-8/90 to-[100%] lg:p-15">
+                <h4 className="h4 mb-4 text-white font-bold">
+                  ¿Por qué confiar en nosotros?
+                </h4>
+                <p className="body-2 mb-[3rem] text-white font-bold">
+                  Una asesoría contable confiable garantiza la correcta gestión
+                  de tus registros financieros, el cumplimiento puntual de tus
+                  obligaciones fiscales y la reducción de riesgos legales.
+                  Ofrece asesoramiento personalizado que optimiza recursos y
+                  facilita la planificación financiera, mejorando la eficiencia
+                  administrativa y brindándote tranquilidad. Así, puedes
+                  enfocarte en el crecimiento de tu negocio con la seguridad de
+                  que la contabilidad está bien gestionada, ahorrando tiempo y
+                  evitando sanciones.
+                </p>
               </div>
 
               <PhotoChatMessage />
@@ -84,11 +104,13 @@ const Services = () => {
 
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                      <h4 className="h4 mb-4 text-black font-bold">Video generation</h4>
-                      <p className="body-2 mb-[2rem] text-black font-bold">
-                        The world’s most powerful AI photo and video art generation
-                        engine. What will you create?
-                      </p>
+                <h4 className="h4 mb-4 text-black font-bold">
+                  Video generation
+                </h4>
+                <p className="body-2 mb-[2rem] text-black font-bold">
+                  The world’s most powerful AI photo and video art generation
+                  engine. What will you create?
+                </p>
 
                 <ul className="flex items-center justify-between">
                   {brainwaveServicesIcons.map((item, index) => (

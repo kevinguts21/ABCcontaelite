@@ -1,86 +1,85 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { companyLogos } from "../constants";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // Puedes usar cualquier ícono o SVG
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const CompanyLogos = ({ className }) => {
   const scrollRef = useRef(null);
-  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
-  // Pausar animación automática al usar flechas
-  const handleScroll = (direction) => {
-    if (!scrollRef.current) return;
-    setIsAutoScrolling(false);
+  // Repetimos los logos muchas veces para simular "infinito"
+  const repeatedLogos = Array(20).fill(companyLogos).flat(); // 20 veces
 
-    const scrollAmount = direction === "left" ? -200 : 200;
-    scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  // Auto-scroll continuo sin reset
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
 
-    // Reanudar animación luego de un tiempo
-    clearTimeout(scrollRef.current.resumeTimeout);
-    scrollRef.current.resumeTimeout = setTimeout(() => {
-      setIsAutoScrolling(true);
-    }, 6000);
-  };
+    const scrollSpeed = 0.5; // Ajusta velocidad aquí (px por frame)
+    let animationFrameId;
 
-  // Clona los logos para efecto de loop (solo para animación)
-  const duplicatedLogos = [...companyLogos, ...companyLogos];
+    const autoScroll = () => {
+      scrollContainer.scrollLeft += scrollSpeed;
+
+      // Si llega muy al final, vuelve hacia el centro de la cinta sin que se note
+      if (
+        scrollContainer.scrollLeft >=
+        scrollContainer.scrollWidth - scrollContainer.clientWidth - 1
+      ) {
+        scrollContainer.scrollLeft = scrollContainer.scrollWidth / 2;
+      }
+
+      animationFrameId = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrameId = requestAnimationFrame(autoScroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   return (
     <div className={`${className} overflow-hidden relative`}>
-      {/* Texto introductorio */}
-      <h5 className="tagline mb-6 text-center font-bold text-black text-xl">
+      <h4 className="tagline mb-4 text-center font-bold text-black text-xl">
         Empresas que nos avalan
-      </h5>
+      </h4>
 
-      {/* Carrusel con navegación */}
       <div className="relative w-full">
-        {/* Flecha izquierda */}
         <button
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors"
-          onClick={() => handleScroll("left")}
+          onClick={() => {
+            scrollRef.current.scrollLeft -= 200;
+          }}
         >
           <ChevronLeft className="w-5 h-5 text-gray-700" />
         </button>
 
-        {/* Logos desplazables */}
         <div
           ref={scrollRef}
-          className={`flex whitespace-nowrap overflow-x-scroll scrollbar-hide transition-all duration-700 ${isAutoScrolling ? "animate-scroll" : ""}`}
+          className="flex whitespace-nowrap overflow-x-scroll scrollbar-hide"
         >
-          {duplicatedLogos.map((logo, index) => (
+          {repeatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center text-black font-bold h-[8.5rem] min-w-[10rem] px-6"
+              className="flex items-center justify-center text-black font-bold h-[8.5rem] min-w-[10rem] px-6 shrink-0"
             >
               <img src={logo} width={134} height={28} alt={`logo-${index}`} />
             </div>
           ))}
         </div>
 
-        {/* Flecha derecha */}
         <button
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full p-2 hover:bg-gray-100 transition-colors"
-          onClick={() => handleScroll("right")}
+          onClick={() => {
+            scrollRef.current.scrollLeft += 200;
+          }}
         >
           <ChevronRight className="w-5 h-5 text-gray-700" />
         </button>
       </div>
 
-      {/* Estilos personalizados */}
       <style>
         {`
-          @keyframes scroll {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-          }
-
-          .animate-scroll {
-            animation: scroll 30s linear infinite;
-          }
-
           .scrollbar-hide::-webkit-scrollbar {
             display: none;
           }
-
           .scrollbar-hide {
             -ms-overflow-style: none;
             scrollbar-width: none;
