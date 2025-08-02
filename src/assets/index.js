@@ -2,7 +2,7 @@ import brainwave from "./brainwave.svg";
 import abc_logo from "./abc_logo.png";
 import check from "./check.svg";
 import brainwaveSymbol from "./brainwave-symbol.svg";
-import brainwaveWhiteSymbol from "./brainwave-symbol-white.svg";
+import brainwaveWhiteSymbol from "./abc_icon.png";
 import play from "./play.svg";
 import gradient from "./gradient.png";
 import smallSphere from "./redcircle.png";
@@ -14,11 +14,11 @@ import homeSmile from "./home-smile.svg";
 import file02 from "./file-02.svg";
 import searchMd from "./search-md.svg";
 import plusSquare from "./plus-square.svg";
-import recording03 from "./recording-03.svg";
-import recording01 from "./recording-01.svg";
-import disc02 from "./disc-02.svg";
-import chromecast from "./chrome-cast.svg";
-import sliders04 from "./sliders-04.svg";
+import recording03 from "./hardisk.svg";
+import recording01 from "./piechart.svg";
+import disc02 from "./chart.svg";
+import chromecast from "./folder.svg";
+import sliders04 from "./calendar.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
 
@@ -37,9 +37,9 @@ import protopie from "./collaboration/protopie.png";
 import raindrop from "./collaboration/raindrop.png";
 import slack from "./collaboration/slack.png";
 
-import service1 from "./services/service-1.png";
+import service1 from "./services/business.png";
 import service2 from "./services/count.png";
-import service3 from "./services/service-3.png";
+import service3 from "./services/desktop.jpg";
 
 import lines from "./pricing/lines.svg";
 import stars from "./pricing/stars.svg";

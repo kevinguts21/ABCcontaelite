@@ -102,14 +102,16 @@ const Services = () => {
               <PhotoChatMessage />
             </div>
 
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+            <div className="p-4 bg-n-4 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4 text-black font-bold">
-                  Video generation
+                  Visualiza tus finanzas con claridad
                 </h4>
                 <p className="body-2 mb-[2rem] text-black font-bold">
-                  The world’s most powerful AI photo and video art generation
-                  engine. What will you create?
+                  Una contabilidad bien gestionada te permite conocer en todo
+                  momento el estado real de tu negocio. Facilita la toma de
+                  decisiones, el control de gastos y la proyección de
+                  crecimiento.
                 </p>
 
                 <ul className="flex items-center justify-between">
@@ -125,7 +127,7 @@ const Services = () => {
                       <div
                         className={
                           index === 2
-                            ? "flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]"
+                            ? "flex items-center justify-center w-full h-full bg-n-4 rounded-[1rem]"
                             : ""
                         }
                       >
@@ -146,7 +148,7 @@ const Services = () => {
                 />
 
                 <VideoChatMessage />
-                <VideoBar />
+                
               </div>
             </div>
           </div>
