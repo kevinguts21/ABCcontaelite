@@ -47,7 +47,7 @@ const FloatingWhatsapp = () => {
   return (
     <>
       <div
-        className="fixed bottom-20 right-20 z-50 flex flex-col items-end"
+        className="fixed bottom-20 right-20 z-50 flex flex-col items-end"       
         onMouseEnter={() => !isMobile && setShowPreview(true)}
         onMouseLeave={() => !isMobile && setShowPreview(false)}
         style={{ pointerEvents: "auto" }}
