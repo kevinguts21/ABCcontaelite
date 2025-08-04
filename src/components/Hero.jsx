@@ -44,7 +44,7 @@ const Hero = () => {
             "Optimice la eficiencia y exactitud contable con ABC CONTAÉLITE,
              referente en soluciones económicas integrales."
           </p>
-          <Button href="#pricing" white>
+          <Button href="#pricing">
             Empezar ahora
           </Button>
         </div>

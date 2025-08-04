@@ -19,7 +19,8 @@
 
 @layer base {
   body {
-    @apply font-sans bg-n-5 text-n-4 text-base;
+    @apply font-sans text-n-4 text-base;
+    background-color: #77429623; /* Blanco beige suave */
   }
 }
 

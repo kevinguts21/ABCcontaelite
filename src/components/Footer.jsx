@@ -4,7 +4,7 @@ import { socials } from "../constants";
 import { abc_logo } from "../assets";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { arrow_up } from "../assets";
-
+import FAQPage from "./F&Qpage";
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -25,7 +25,7 @@ const Footer = () => {
   };
 
   return (
-    <Section crosses className="relative !px-0 !py-15" id="footer">
+    <Section crosses className="relative !px-0 !py-15 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm" id="footer">
       {/* Vista móvil */}
       {isMobile ? (
         <div>
@@ -61,10 +61,10 @@ const Footer = () => {
 
           {/* Contacto */}
           <div className="flex flex-col items-start mb-4">
-            <p className="font-semibold text-white mb-2">Contáctanos</p>
+            <p className="font-bold text-white mb-2">Contáctanos</p>
             <a
               href="tel:+5354638504"
-              className="flex items-center text-sm text-n-3 mb-1 hover:text-white transition-colors"
+              className="flex items-center text-sm text-n-3 mb-1 hover:text-white font-bold transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />
               <span>+53 54638504</span>
@@ -73,7 +73,7 @@ const Footer = () => {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=abccontaelite.oficial@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-sm text-n-3 mb-1 hover:text-white transition-colors"
+              className="flex items-center text-sm text-n-3 mb-1 hover:text-white font-bold transition-colors"
             >
               <Mail className="w-4 h-4 mr-2" />
               <span>abccontaelite.oficial@gmail.com</span>
@@ -82,7 +82,7 @@ const Footer = () => {
               href="https://maps.app.goo.gl/ur1xgh4gmEgrass76"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-sm text-n-3 hover:text-white transition-colors"
+              className="flex items-center text-sm text-n-3 hover:text-white font-bold transition-colors"
             >
               <MapPin className="w-4 h-4 mr-2" />
               <span>123 Calle Ficticia, Habana, Cuba</span>
@@ -108,7 +108,7 @@ const Footer = () => {
               height={120}
               className="mb-2"
             />
-            <p className="caption text-n-4">
+            <p className="caption text-n-4 hover:text-white font-bold ">
               © {new Date().getFullYear()}. All rights reserved.
             </p>
           </div>
@@ -131,7 +131,7 @@ const Footer = () => {
               ))}
             </ul>
 
-            <p className="font-semibold text-white mb-2">Contáctanos</p>
+            <p className="text-white font-bold mb-2">Contáctanos</p>
 
             {/* Teléfono */}
             <div className="flex items-center text-sm text-n-3 mb-1">
@@ -144,7 +144,7 @@ const Footer = () => {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=abccontaelite.oficial@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-sm text-n-3 mb-1 hover:text-white transition-colors"
+              className="flex items-center text-sm text-n-3 mb-1 hover:text-white font-bold transition-colors"
             >
               <Mail className="w-4 h-4 mr-2" />
               <span>abccontaelite.oficial@gmail.com</span>
@@ -155,16 +155,23 @@ const Footer = () => {
               href="https://maps.app.goo.gl/ur1xgh4gmEgrass76"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-sm text-n-3 hover:text-white transition-colors"
+              className="flex items-center text-sm text-n-3 hover:text-white font-bold transition-colors"
             >
-              <MapPin className="w-4 h-4 mr-2" />
-              <span>123 Calle Ficticia, Habana, Cuba</span>
+              <MapPin className="w-4 h-4 mr-2 font-bold" />
+              <span >123 Calle Ficticia, Habana, Cuba</span>
             </a>
           </div>
 
           {/* Contenido central */}
           <div className="container mt-32 flex justify-center items-center">
-            {/* Puedes agregar más contenido aquí */}
+           <a
+              href="/FAQPage"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-sm text-n-3 hover:text-white font-bold transition-colors"
+            >
+              <span >Preguntas Frecuentes</span>
+            </a>
           </div>
         </>
       )}
