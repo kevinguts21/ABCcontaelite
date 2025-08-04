@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6 text-black font-bold ">
             Explora las Posibilidades de&nbsp;Contabilidad con {` `}
-            <span className="inline-block relative bg-gradient-to-r from-red-900 via-fuchsia-700 to-rose-900 bg-clip-text text-transparent font-bold">
+            <span className="inline-block relative bg-gradient-to-r from-red-500 via-red-600 to-red-500 bg-clip-text text-transparent font-bold">
               ABC CONTAÉLITE{" "}
               <img
                 src={curve}
@@ -42,11 +42,9 @@ const Hero = () => {
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-black font-bold lg:mb-8">
             "Optimice la eficiencia y exactitud contable con ABC CONTAÉLITE,
-             referente en soluciones económicas integrales."
+            referente en soluciones económicas integrales."
           </p>
-          <Button href="#pricing">
-            Empezar ahora
-          </Button>
+          <Button href="#pricing">Empezar ahora</Button>
         </div>
         {/* Imagen principal y decoraciones */}
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
@@ -105,7 +103,6 @@ const Hero = () => {
 
         {/* Logos de empresas */}
         <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
-        
       </div>
 
       {/* Línea decorativa inferior */}

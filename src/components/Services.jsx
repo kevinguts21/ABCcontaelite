@@ -102,7 +102,7 @@ const Services = () => {
               <PhotoChatMessage />
             </div>
 
-            <div className="p-4 bg-n-4 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+            <div className="p-5 bg-n-2 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4 text-black font-bold">
                   Visualiza tus finanzas con claridad
@@ -121,7 +121,7 @@ const Services = () => {
                       className={`rounded-2xl flex items-center justify-center ${
                         index === 2
                           ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
-                          : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
+                          : "flex w-10 h-10 bg-n-1 md:w-15 md:h-15"
                       }`}
                     >
                       <div
