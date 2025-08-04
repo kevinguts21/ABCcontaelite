@@ -20,7 +20,7 @@
 @layer base {
   body {
     @apply font-sans text-white text-base;
-    background-color: #EEEEEE; /* Blanco beige suave */
+   background-color: #77429623; /* Blanco beige suave */
   }
 }
 
