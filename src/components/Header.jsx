@@ -53,7 +53,7 @@ const Header = () => {
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         {/* Logo principal */}
         <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={abc_logo} width={250} height={60} alt="ABC Contaelite" />
+          <img src={abc_logo} width={250} height={60} alt="ABC Contaélite" />
         </a>
 
         {/* Navegación principal */}

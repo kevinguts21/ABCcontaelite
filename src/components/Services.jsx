@@ -22,7 +22,7 @@ const Services = () => {
           title="Soluciones hechas para la contabilidad."
           text={
             <>
-              En <span style={{ color: "red" }}>ABC ContaElite</span>{" "}
+              En <span style={{ color: "red" }}>ABC ContaÉlite</span>{" "}
               potenciamos tu crecimiento financiero con asesoría contable
               personalizada y herramientas inteligentes que simplifican tu
               gestión
@@ -49,7 +49,7 @@ const Services = () => {
                 La contabilidad más eficaz
               </h4>
               <p className="body-2 mb-[3rem] text-black font-bold">
-                ContaElite potencia tu gestión financiera con soluciones
+                Contaélite potencia tu gestión financiera con soluciones
                 avanzadas y confiables
               </p>
 

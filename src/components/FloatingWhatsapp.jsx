@@ -6,6 +6,7 @@ const baseUrl = "https://wa.me/+5354638504?text=";
 const FloatingWhatsapp = () => {
   const [showPreview, setShowPreview] = useState(false);
   const [userMessage, setUserMessage] = useState("");
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
   const chatRef = useRef(null);
 
   // Detecta si es móvil
@@ -31,6 +32,25 @@ const FloatingWhatsapp = () => {
     };
   }, [isMobile, showPreview]);
 
+  useEffect(() => {
+    const footer = document.getElementById("footer");
+    if (!footer) return;
+
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        setIsFooterVisible(entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0.1, // Ajusta el umbral según lo que necesites
+      }
+    );
+
+    observer.observe(footer);
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleIconClick = (e) => {
     e.preventDefault();
     setShowPreview(true);
@@ -46,67 +66,69 @@ const FloatingWhatsapp = () => {
 
   return (
     <>
-      <div
-        className="fixed bottom-20 right-20 z-50 flex flex-col items-end"       
-        onMouseEnter={() => !isMobile && setShowPreview(true)}
-        onMouseLeave={() => !isMobile && setShowPreview(false)}
-        style={{ pointerEvents: "auto" }}
-      >
-        <a
-          href={`${baseUrl}Hola%20gracias%20por%20contactar%20con%20ABC%20Contaelite`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow"
-          style={{ boxShadow: "0 4px 16px 2px rgba(0,0,0,0.12)" }}
-          onClick={isMobile ? handleIconClick : (e) => e.preventDefault()}
+      {!isFooterVisible && (
+        <div
+          className="fixed bottom-20 right-15 z-50 flex flex-col items-end"
+          onMouseEnter={() => !isMobile && setShowPreview(true)}
+          onMouseLeave={() => !isMobile && setShowPreview(false)}
+          style={{ pointerEvents: "auto" }}
         >
-          <img src={whatsapp} alt="WhatsApp" width={58} height={58} />
-        </a>
-
-        {showPreview && (
-          <div
-            ref={chatRef}
-            className="mt-2 bg-white rounded-xl shadow-2xl p-4 w-80 animate-fade-in"
-            style={{
-              boxShadow: "0 8px 32px 4px rgba(0,0,0,0.18)",
-              transition: "opacity 0.5s",
-            }}
+          <a
+            href={`${baseUrl}Hola%20gracias%20por%20contactar%20con%20ABC%20Contaélite`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow"
+            style={{ boxShadow: "0 4px 16px 2px rgba(0,0,0,0.12)" }}
+            onClick={isMobile ? handleIconClick : (e) => e.preventDefault()}
           >
-            <div className="flex items-center gap-2 mb-2">
-              <img src={whatsapp} alt="WhatsApp" width={24} height={24} />
-              <span className="font-semibold text-green-600">ABC Contaelite</span>
-            </div>
+            <img src={whatsapp} alt="WhatsApp" width={58} height={58} />
+          </a>
 
-            <div className="bg-green-100 rounded-lg p-3 text-sm text-gray-800 mb-3 shadow-inner">
-              Hola, gracias por contactar con <b>ABC Contaelite</b>, ¿en qué podemos ayudarle?
-            </div>
+          {showPreview && (
+            <div
+              ref={chatRef}
+              className="mt-2 bg-white rounded-xl shadow-2xl p-4 w-80 animate-fade-in"
+              style={{
+                boxShadow: "0 8px 32px 4px rgba(0,0,0,0.18)",
+                transition: "opacity 0.5s",
+              }}
+            >
+              <div className="flex items-center gap-2 mb-2">
+                <img src={whatsapp} alt="WhatsApp" width={24} height={24} />
+                <span className="font-semibold text-green-600">ABC Contaélite</span>
+              </div>
 
-            <div className="flex items-center border rounded-lg overflow-hidden shadow-sm bg-white">
-              <input
-                type="text"
-                placeholder="Escribe tu mensaje..."
-                className="flex-grow p-2 text-sm outline-none text-black font-bold"
-                value={userMessage}
-                onChange={(e) => setUserMessage(e.target.value)}
-              />
-              <button
-                className="bg-green-500 hover:bg-green-600 p-2 text-white"
-                onClick={handleSend}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+              <div className="bg-green-100 rounded-lg p-3 text-sm text-gray-800 mb-3 shadow-inner">
+                Hola, gracias por contactar con <b>ABC Contaélite</b>, ¿en qué podemos ayudarle?
+              </div>
+
+              <div className="flex items-center border rounded-lg overflow-hidden shadow-sm bg-white">
+                <input
+                  type="text"
+                  placeholder="Escribe tu mensaje..."
+                  className="flex-grow p-2 text-sm outline-none text-black font-bold"
+                  value={userMessage}
+                  onChange={(e) => setUserMessage(e.target.value)}
+                />
+                <button
+                  className="bg-green-500 hover:bg-green-600 p-2 text-white"
+                  onClick={handleSend}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      )}
 
       {/* Animación */}
       <style>

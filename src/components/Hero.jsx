@@ -28,9 +28,9 @@ const Hero = () => {
         {/* Título, descripción y botón principal */}
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6 text-black font-bold ">
-            Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
-            <span className="inline-block relative text-black font-bold">
-              Brainwave{" "}
+            Explora las Posibilidades de&nbsp;Contabilidad con {` `}
+            <span className="inline-block relative bg-gradient-to-r from-red-900 via-fuchsia-700 to-rose-900 bg-clip-text text-transparent font-bold">
+              ABC CONTAÉLITE{" "}
               <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -41,11 +41,11 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-black font-bold lg:mb-8">
-            Unleash the power of AI within Brainwave. Upgrade your productivity
-            with Brainwave, the open AI chat app.
+            "Optimice la eficiencia y exactitud contable con ABC CONTAÉLITE,
+             referente en soluciones económicas integrales."
           </p>
           <Button href="#pricing" white>
-            Get started
+            Empezar ahora
           </Button>
         </div>
         {/* Imagen principal y decoraciones */}

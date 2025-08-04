@@ -22,6 +22,7 @@ import sliders04 from "./calendar.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
 
+
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
 import heroBackground from "./hero/hero-background.jpg";
@@ -76,6 +77,7 @@ import telegram from "./socials/telegram.svg";
 import x from "./socials/x.svg";
 import whatsapp from "./socials/whatsapp.svg";
 import gmail from "./socials/gmail.svg"; 
+import arrow_up from "./footer/arrow_up.svg";
 
 export {
   abc_logo,
@@ -148,4 +150,5 @@ export {
   x,
   whatsapp,
   gmail,
+  arrow_up,
 };
