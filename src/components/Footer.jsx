@@ -4,7 +4,6 @@ import { socials } from "../constants";
 import { abc_logo } from "../assets";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { arrow_up } from "../assets";
-import FAQPage from "./F&Qpage";
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -62,12 +61,20 @@ const Footer = () => {
           {/* Contacto */}
           <div className="flex flex-col items-start mb-4">
             <p className="font-bold text-white mb-2">Contáctanos</p>
+            <p className="caption text-n-4 font-bold text-white ">    Rides Alejandro Borrego Castroda            </p>
             <a
               href="tel:+5354638504"
               className="flex items-center text-sm text-n-3 mb-1 hover:text-white font-bold transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />
               <span>+53 54638504</span>
+            </a>
+            <a
+              href="tel:+5376389361"
+              className="flex items-center text-sm text-n-3 mb-1 hover:text-white font-bold transition-colors"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              <span>+53 76389361</span>
             </a>
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=abccontaelite.oficial@gmail.com"
@@ -132,12 +139,19 @@ const Footer = () => {
             </ul>
 
             <p className="text-white font-bold mb-2">Contáctanos</p>
-
+            <p className="caption text-n-4 text-white ">
+              Rides Alejandro Borrego Castroda
+            </p>
             {/* Teléfono */}
             <div className="flex items-center text-sm text-n-3 mb-1">
               <Phone className="w-4 h-4 mr-2" />
               <span>+53 54638504</span>
             </div>
+            <div className="flex items-center text-sm text-n-3 mb-1">
+              <Phone className="w-4 h-4 mr-2" />
+              <span>+53 76389361</span>
+            </div>
+            
 
             {/* Correo */}
             <a
@@ -164,8 +178,8 @@ const Footer = () => {
 
           {/* Contenido central */}
           <div className="container mt-32 flex justify-center items-center">
-           <a
-              href="/FAQPage"
+            <a
+              href="/#pricing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-sm text-n-3 hover:text-white font-bold transition-colors"

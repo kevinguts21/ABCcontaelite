@@ -1,5 +1,6 @@
 import brainwave from "./brainwave.svg";
 import abc_logo from "./abc_logo.png";
+import abc_icon from "./abc_icon.png";
 import check from "./check.svg";
 import brainwaveSymbol from "./abc_icon.svg";
 import brainwaveWhiteSymbol from "./abc_icon.png";
@@ -79,7 +80,13 @@ import whatsapp from "./socials/whatsapp.svg";
 import gmail from "./socials/gmail.svg"; 
 import arrow_up from "./footer/arrow_up.svg";
 
+//Logos de las compañias
+import cliref from "./companyLogos/cliref.png";
+import ruedas_caiman from "./companyLogos/ruedas_caiman.png";
+import unaicc from "./companyLogos/unaicc.png";
+
 export {
+  abc_icon,
   abc_logo,
   brainwave,
   check,
@@ -151,4 +158,7 @@ export {
   whatsapp,
   gmail,
   arrow_up,
+  cliref,
+  ruedas_caiman,
+  unaicc,
 };

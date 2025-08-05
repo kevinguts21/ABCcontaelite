@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import Section from "./Section";
-import { smallSphere, stars } from "../assets";
+import { smallSphere, stars,abc_icon} from "../assets";
 import Heading from "./Heading";
 import PricingList from "./PricingList";
 import { LeftLine, RightLine } from "./design/Pricing";
+
 
 const Pricing = () => {
   const sphereRef = useRef(null); // Referencia al sphere
@@ -35,18 +36,30 @@ const Pricing = () => {
       <div className="container relative z-2">
         {/* Decoraciones visuales: esfera y sustituyendo el img con ref y rotación */}
         <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
-          <img
-            ref={sphereRef}
-            src={smallSphere}
-            className="relative z-1"
-            width={255}
-            height={255}
-            alt="Sphere"
-            style={{
-              transform: `rotate(${rotation}deg)`,
-              transition: "transform 0.01s linear",
-            }}
-          />
+          {/* Contenedor relativo para superposición */}
+          <div className="relative">
+            <img
+              ref={sphereRef}
+              src={smallSphere}
+              className="relative z-1"
+              width={255}
+              height={255}
+              alt="Sphere"
+              style={{
+                transform: `rotate(${rotation}deg)`,
+                transition: "transform 0.01s linear",
+              }}
+            />
+            {/* abc_icon superpuesto, centrado */}
+            <img
+              src={abc_icon}
+              alt="ABC Icon"
+              width={120}
+              height={120}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2 pointer-events-none"
+              style={{}}
+            />
+          </div>
           <div className="absolute top-1/2 left-1/2 w-[60rem] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
             <img
               src={stars}
@@ -59,7 +72,7 @@ const Pricing = () => {
         </div>
 
         {/* Título y subtítulo */}
-        <Heading tag="Get started with Brainwave" title="Pay once, use forever" />
+        <Heading tag="Empezar con ABC CONTAÉLITE" title="Acceda a nuestros servicios" />
 
         {/* Lista de precios y líneas decorativas */}
         <div className="relative">

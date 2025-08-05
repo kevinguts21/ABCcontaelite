@@ -8,7 +8,6 @@ import Pricing from "./components/Pricing";
 import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
-import FAQPage from "./components/F&Qpage";
 
 const App = () => {
   return (

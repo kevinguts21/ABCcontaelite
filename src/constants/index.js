@@ -35,17 +35,20 @@ import {
   yourlogo,
   whatsapp,
   gmail,
+  cliref,
+  ruedas_caiman,
+  unaicc,
 } from "../assets";
 
 export const navigation = [
   {
     id: "0",
-    title: "Features",
+    title: "Sobre Nosotros",
     url: "#features",
   },
   {
     id: "1",
-    title: "Pricing",
+    title: "Servicios",
     url: "#pricing",
   },
   {
@@ -55,8 +58,8 @@ export const navigation = [
   },
   {
     id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
+    title: "Contáctanos",
+    url: "#footer",
   },
   // {
   //   id: "4",
@@ -76,7 +79,7 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+export const companyLogos = [yourlogo, cliref, ruedas_caiman, unaicc, yourlogo];
 
 export const brainwaveServices = [
   "Gestión precisa",
@@ -209,35 +212,35 @@ export const collabApps = [
 export const pricing = [
   {
     id: "0",
-    title: "Basic",
-    description: "AI chatbot, personalized recommendations",
-    price: "0",
+    title: "Contabilidad Esencial",
+    description: "Gestión contable básica para autónomos y pequeñas empresas",
+    // price: "0",
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Registro y control de ingresos y gastos mensuales",
+      "Elaboración de balances y estados financieros básicos",
+      "Cumplimiento de obligaciones fiscales periódicas",
     ],
   },
   {
     id: "1",
-    title: "Premium",
-    description: "Advanced AI chatbot, priority support, analytics dashboard",
-    price: "9.99",
+    title: "Asesoría Fiscal Inteligente",
+    description: "Optimización tributaria para maximizar tus beneficios",
+    // price: "9.99",
     features: [
-      "An advanced AI chatbot that can understand complex queries",
-      "An analytics dashboard to track your conversations",
-      "Priority support to solve issues quickly",
+      "Análisis personalizado de tu situación fiscal",
+      "Estrategias legales para reducir tu carga impositiva",
+      "Presentación y seguimiento de declaraciones fiscales",
     ],
   },
   {
     id: "2",
-    title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: null,
+    title: "Consultoría Económica",
+    description: "Apoyo estratégico para decisiones financieras clave",
+    // price: null,
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Evaluación financiera de proyectos o inversiones",
+      "Proyecciones económicas y análisis de rentabilidad",
+      "Recomendaciones basadas en indicadores financieros",
     ],
   },
 ];

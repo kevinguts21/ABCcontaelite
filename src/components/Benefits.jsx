@@ -39,10 +39,6 @@ const Benefits = () => {
                     height={48}
                     alt={item.title}
                   />
-                  <p className="ml-auto font-code text-xs font-bold text-black uppercase tracking-wider">
-                   Descubre más
-                  </p>
-                  <Arrow />
                 </div>
               </div>
 
