@@ -38,6 +38,7 @@ import {
   cliref,
   ruedas_caiman,
   unaicc,
+  excel,
 } from "../assets";
 
 export const navigation = [
@@ -188,10 +189,10 @@ export const collabApps = [
   },
   {
     id: "5",
-    title: "Protopie",
-    icon: protopie,
-    width: 34,
-    height: 34,
+    title: "excel",
+    icon: excel,
+    width: 50,
+    height: 50,
   },
   {
     id: "6",

@@ -38,6 +38,7 @@ import photoshop from "./collaboration/photoshop.png";
 import protopie from "./collaboration/protopie.png";
 import raindrop from "./collaboration/raindrop.png";
 import slack from "./collaboration/slack.png";
+import excel from "./collaboration/excel.png";
 
 import service1 from "./services/business.png";
 import service2 from "./services/count.png";
@@ -161,4 +162,5 @@ export {
   cliref,
   ruedas_caiman,
   unaicc,
+  excel,
 };
