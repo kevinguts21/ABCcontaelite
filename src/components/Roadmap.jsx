@@ -12,7 +12,7 @@ const Roadmap = () => (
   <Section className="overflow-hidden" id="roadmap">
     <div className="container md:pb-10">
       {/* Título y subtítulo */}
-      <Heading tag="Ready to get started" title="What we’re working on" />
+      <Heading tag="Listos para empezar" title="En qué estamos trabajando" />
 
       {/* Grid de tarjetas del roadmap */}
       <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
@@ -76,7 +76,7 @@ const Roadmap = () => (
       </div>
 
       <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Button href="/roadmap">Our roadmap</Button>
+        <Button href="/roadmap">Nuestro marco de trabajo</Button>
       </div>
     </div>
   </Section>

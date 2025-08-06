@@ -86,7 +86,7 @@ const Pricing = () => {
             className="text-xs font-code font-bold text-black tracking-wider uppercase border-b"
             href="/pricing"
           >
-            See the full details
+            Ver todos los detalles
           </a>
         </div>
       </div>

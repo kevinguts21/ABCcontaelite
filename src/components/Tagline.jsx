@@ -8,7 +8,7 @@ const TagLine = ({ className, children }) => {
       {/* Corchete izquierdo decorativo */}
       {brackets("left")}
       {/* Texto del tagline */}
-      <div className="mx-3 text-n-3">{children}</div>
+      <div className="mx-3 text-n-5">{children}</div>
       {/* Corchete derecho decorativo */}
       {brackets("right")}
     </div>
