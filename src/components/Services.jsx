@@ -33,12 +33,12 @@ const Services = () => {
         <div className="relative">
           {/* Primer bloque: Smartest AI */}
           <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border-2 border-n-8/40 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
+            <div className="absolute top-0 left-0 w-full h-full pointer-events-none hidden md:block md:w-3/5 xl:w-auto">
               <img
                 className="w-full h-full object-cover md:object-right"
                 width={800}
-                alt="Smartest AI"
                 height={730}
+                alt="Smartest AI"
                 src={service1}
               />
             </div>
