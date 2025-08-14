@@ -82,9 +82,9 @@ import gmail from "./socials/gmail.svg";
 import arrow_up from "./footer/arrow_up.svg";
 
 //Logos de las compañias
-import cliref from "./companyLogos/cliref.png";
-import ruedas_caiman from "./companyLogos/ruedas_caiman.png";
-import unaicc from "./companyLogos/unaicc.png";
+import cliref from "./companylogos/cliref.png";
+import ruedas_caiman from "./companylogos/ruedas_caiman.png";
+import unaicc from "./companylogos/unaicc.png";
 
 export {
   abc_icon,

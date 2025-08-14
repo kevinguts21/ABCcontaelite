@@ -3,9 +3,6 @@
 import { benefits } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
-import Arrow from "../assets/svg/Arrow";
-import { GradientLight } from "./design/Benefits";
-import ClipPath from "../assets/svg/ClipPath";
 
 const Benefits = () => {
   return (
@@ -21,16 +18,13 @@ const Benefits = () => {
         <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((item) => (
             <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
-              style={{
-                backgroundImage: `url(${item.backgroundUrl})`,
-              }}
+              className="block relative md:max-w-[24rem] rounded-2xl bg-white border border-gray-200 shadow-sm overflow-hidden transition-shadow duration-300 ease-out hover:shadow-md"
               key={item.id}
             >
-              <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
+              <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem]">
                 {/* Título y texto del beneficio */}
                 <h5 className="h5 mb-5 font-bold text-black">{item.title}</h5>
-                <p className="body-2 mb-6 font-bold text-black">{item.text}</p>
+                <p className="body-2 mb-6 text-red-600">{item.text}</p>
                 {/* Icono y enlace decorativo */}
                 <div className="flex items-center mt-auto">
                   <img
@@ -41,30 +35,6 @@ const Benefits = () => {
                   />
                 </div>
               </div>
-
-              {/* Gradiente decorativo si corresponde */}
-              {item.light && <GradientLight />}
-
-              {/* Imagen de fondo con efecto hover */}
-              <div
-                className="absolute inset-0.5 bg-white/80"
-                style={{ clipPath: "url(#benefits)" }}
-              >
-                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
-                  {item.imageUrl && (
-                    <img
-                      src={item.imageUrl}
-                      width={380}
-                      height={362}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-              </div>
-
-              {/* SVG para el recorte decorativo */}
-              <ClipPath />
             </div>
           ))}
         </div>
