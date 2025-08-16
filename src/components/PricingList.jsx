@@ -49,7 +49,7 @@ const PricingList = () => {
 
             {/* Botón de acción al fondo */}
             <button
-              className="mt-6 w-full rounded-[1.3rem] bg-[#ff0400] text-white py-4 font-semibold transition-all duration-300 border-2 border-transparent hover:bg-white hover:text-[#ff0400] hover:border-[#ff0400]"
+              className="mt-6 w-full rounded-[1.3rem] bg-[#ff0400] text-white py-4 font-semibold transition-all duration-100 border-2 border-transparent hover:bg-white hover:text-[#ff0400] hover:border-[#ff0400]"
               onClick={() => {
                 console.log("Solicitar información de:", item.title);
               }}
