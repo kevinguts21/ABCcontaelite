@@ -1,5 +1,6 @@
 import { Users, Clock, Briefcase, Award } from "lucide-react";
-import Section from "./Section"; // ajusta la ruta según tu proyecto
+import { check } from "../assets";
+import Section from "./Section";
 
 const AboutSection = () => {
   const cards = [
@@ -25,8 +26,15 @@ const AboutSection = () => {
     },
   ];
 
+  const valores = [
+    "Transparencia Total - Comunicación clara y honesta en cada proceso. Sin sorpresas, sin costos ocultos.",
+    "Excelencia Técnica - Equipo certificado con las últimas actualizaciones en normativas fiscales y contables.",
+    "Compromiso Personal - Cada cliente es único. Adaptamos nuestros servicios a las necesidades específicas de tu empresa.",
+    "Innovación Constante - Utilizamos las mejores herramientas tecnológicas para optimizar procesos y resultados.",
+  ];
+
   return (
-    <Section id="about">
+    <Section className="bg-n-1" id="about" crosses={false}>
       <div className="container mx-auto px-4 text-center">
         {/* Título */}
         <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
@@ -40,12 +48,11 @@ const AboutSection = () => {
         </p>
 
         {/* Grid de Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {cards.map((card) => (
             <div
               key={card.id}
-              className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-center text-center 
-                         shadow-md transition-all duration-300 hover:shadow-xl"
+              className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-center text-center shadow-md transition-all duration-300 lg:hover:shadow-xl"
             >
               <div className="w-14 h-14 flex items-center justify-center bg-[#ff0400]/10 rounded-full mb-4">
                 {card.icon}
@@ -53,6 +60,38 @@ const AboutSection = () => {
               <p className="text-lg font-semibold text-black">{card.title}</p>
             </div>
           ))}
+        </div>
+
+        {/* Sección Misión y Valores */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch text-left">
+          {/* Nuestra Misión */}
+          <div className="flex flex-col justify-center">
+            <h3 className="text-2xl lg:text-3xl font-bold text-black mb-6">
+              Nuestra Misión
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              En ABC ContaElite Rides SRL, creemos que cada empresa, sin importar su tamaño, merece tener acceso a servicios contables de la más alta calidad. 
+              Nuestra misión es simplificar la gestión financiera de las mipymes, proporcionando soluciones integrales que les permitan enfocarse en lo que mejor saben hacer: hacer crecer su negocio.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              Con más de 8 años de experiencia en el sector, hemos desarrollado una metodología única que combina la experiencia tradicional con las últimas tecnologías, garantizando precisión, eficiencia y tranquilidad para nuestros clientes.
+            </p>
+          </div>
+
+          {/* Nuestros Valores */}
+          <div className="rounded-[2rem] bg-gradient-to-r from-[#ff0400] to-[#a00000] text-white p-10 flex flex-col justify-center">
+            <h3 className="text-2xl lg:text-3xl font-bold mb-6">
+              Nuestros Valores
+            </h3>
+            <ul className="space-y-4">
+              {valores.map((valor, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <img src={check} alt="check" className="w-6 h-6 mt-1 flex-shrink-0" />
+                  <span className="leading-relaxed">{valor}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </Section>

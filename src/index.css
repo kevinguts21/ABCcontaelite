@@ -20,7 +20,7 @@
 @layer base {
   body {
     @apply font-sans text-white text-base;
-   background-color: #f0e4e433;
+   background-color: #f5f1f133;
   }
 }
 

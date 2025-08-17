@@ -51,14 +51,7 @@ const Pricing = () => {
               }}
             />
             {/* abc_icon superpuesto, centrado */}
-            <img
-              src={abc_icon}
-              alt="ABC Icon"
-              width={120}
-              height={120}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-2 pointer-events-none"
-              style={{}}
-            />
+           
           </div>
           <div className="absolute top-1/2 left-1/2 w-[60rem] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
             <img
