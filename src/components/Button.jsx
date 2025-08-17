@@ -1,33 +1,24 @@
+const Button = ({ className, href, onClick, children, px }) => {
+  const classes = `relative inline-flex items-center justify-center h-11 
+    rounded-lg border border-[#ff0400] font-semibold transition-all duration-200 
+    ${px || "px-7"} bg-white text-[#ff0400] 
+    hover:bg-[#ff0400] hover:text-white hover:shadow-md
+    ${className || ""}`;
 
-// Componente de botón reutilizable
-// Puede renderizarse como <button> o <a> dependiendo de si recibe la prop href
-import ButtonSvg from "../assets/svg/ButtonSvg";
+  const spanClasses = "relative z-10";
 
-const Button = ({ className, href, onClick, children, px, white }) => {
-  // Define las clases CSS del botón según las props
-  const classes = `button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1 ${
-    px || "px-7"
-  } ${white ? "text-n-8" : "text-n-1"} ${className || ""}`;
-  const spanClasses = "relative z-10 font-bold text-black";
-
-  // Renderiza un botón estándar
   const renderButton = () => (
     <button className={classes} onClick={onClick}>
       <span className={spanClasses}>{children}</span>
-      {/* Icono SVG decorativo */}
-      {ButtonSvg(white)}
     </button>
   );
 
-  // Renderiza un enlace si se proporciona href
   const renderLink = () => (
     <a href={href} className={classes}>
       <span className={spanClasses}>{children}</span>
-      {ButtonSvg(white)}
     </a>
   );
 
-  // Decide si renderizar como <a> o <button>
   return href ? renderLink() : renderButton();
 };
 

@@ -19,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-[#101828] text-white py-12 px-6">
+    <footer id="footer" className="relative bg-[#101828] text-white py-12 px-6">
       {isMobile ? (
         // Vista móvil
         <div>

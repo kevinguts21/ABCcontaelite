@@ -1,7 +1,7 @@
-// Componente que muestra la sección de colaboración
-// Presenta beneficios, botón de acción y gráfico circular con apps colaborativas
+// Componente que muestra la sección de contabilidad online
+// Presenta beneficios, botón de acción y gráfico circular con apps financieras
 import { brainwaveSymbol, check } from "../assets";
-import { collabApps, collabContent, collabText } from "../constants";
+import { collabApps } from "../constants";
 import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
@@ -13,18 +13,38 @@ const Collaboration = () => {
         {/* Columna izquierda: beneficios y botón */}
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8 text-black">
-            AI Chat App for seamless collaboration
+            Plataforma de Contabilidad Online para tu Negocio
           </h2>
 
           {/* Lista de beneficios */}
           <ul className="max-w-[22rem] mb-10 md:mb-14">
-            {collabContent.map((item) => (
+            {[
+              {
+                id: 1,
+                title: "Reportes financieros en tiempo real",
+                text: "Visualiza balances, ingresos y gastos actualizados desde cualquier dispositivo.",
+              },
+              {
+                id: 2,
+                title: "Automatización de procesos",
+                text: "Facturación, conciliación bancaria y control de inventario de forma automática.",
+              },
+              {
+                id: 3,
+                title: "Cumplimiento tributario",
+                text: "Asegura la correcta presentación de impuestos y obligaciones fiscales.",
+              },
+              {
+                id: 4,
+                title: "Acceso multiusuario seguro",
+                text: "Colabora con tu equipo y tu contador en la misma plataforma.",
+              },
+            ].map((item) => (
               <li className="mb-3 py-3" key={item.id}>
                 <div className="flex items-center">
                   <img src={check} width={24} height={24} alt="check" />
                   <h6 className="body-2 ml-5 text-black">{item.title}</h6>
                 </div>
-                {/* Texto adicional del beneficio */}
                 {item.text && (
                   <p className="body-2 mt-3 text-gray-700">{item.text}</p>
                 )}
@@ -33,13 +53,15 @@ const Collaboration = () => {
           </ul>
 
           {/* Botón de acción */}
-          <Button>Try it now</Button>
+          <Button>Solicitar demo gratuita</Button>
         </div>
 
-        {/* Columna derecha: gráfico circular y apps colaborativas */}
+        {/* Columna derecha: gráfico circular y apps financieras */}
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
           <p className="body-2 mb-8 text-gray-700 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
-            {collabText}
+            Centraliza la gestión de tu empresa con una solución contable en la
+            nube. Controla ingresos, gastos, impuestos y facturación desde un
+            mismo lugar, optimizando tu tiempo y reduciendo errores.
           </p>
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
@@ -57,7 +79,7 @@ const Collaboration = () => {
               </div>
             </div>
 
-            {/* Apps colaborativas alrededor del círculo */}
+            {/* Apps financieras alrededor del círculo */}
             <ul>
               {collabApps.map((app, index) => (
                 <li
