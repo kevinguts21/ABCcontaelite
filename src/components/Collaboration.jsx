@@ -34,11 +34,7 @@ const Collaboration = () => {
                 title: "Cumplimiento tributario",
                 text: "Asegura la correcta presentación de impuestos y obligaciones fiscales.",
               },
-              {
-                id: 4,
-                title: "Acceso multiusuario seguro",
-                text: "Colabora con tu equipo y tu contador en la misma plataforma.",
-              },
+              
             ].map((item) => (
               <li className="mb-3 py-3" key={item.id}>
                 <div className="flex items-center">

@@ -1,112 +1,111 @@
-// Componente principal de la landing page (Hero)
-// Muestra título, descripción, botón, imagen principal, animaciones y logos
-import { curve, heroBackground, robot } from "../assets";
+// Hero.jsx estilo "Polar" (Tailwind), sin cajas/gradientes inferiores ni crosses
+import { useRef } from "react";
+import { curve, robot } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
-import { heroIcons } from "../constants";
-import { ScrollParallax } from "react-just-parallax";
-import { useRef } from "react";
-import Generating from "./Generating";
-import Notification from "./Notification";
-import CompanyLogos from "./CompanyLogos";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
 
   return (
     <Section
-      className="pt-[12rem] -mt-[5.25rem]"
-      crosses
-      crossesOffset="lg:translate-y-[5.25rem]"
-      customPaddings
       id="hero"
+      customPaddings
+      className="relative isolate min-h-[92vh] flex items-center bg-white"
     >
-      <div className="container relative" ref={parallaxRef}>
-        {/* Fondo blanco para todo el hero en mobile */}
-        <div className="absolute inset-0 bg-white -z-10 md:bg-transparent rounded-none"></div>
-        {/* Título, descripción y botón principal */}
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6 text-black font-bold ">
-            Explora las Posibilidades de&nbsp;Contabilidad con {` `}
-            <span className="inline-block relative bg-gradient-to-r from-red-500 via-red-600 to-red-500 bg-clip-text text-transparent font-bold">
-              ABC CONTAÉLITE{" "}
-              <img
-                src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2"
-                width={624}
-                height={28}
-                alt="Curve"
-              />
-            </span>
-          </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-black font-bold lg:mb-8">
-            "Optimice la eficiencia y exactitud contable con ABC CONTAÉLITE,
-            referente en soluciones económicas integrales."
-          </p>
-          <Button href="#pricing">Empezar ahora</Button>
-        </div>
-        {/* Imagen principal y decoraciones */}
-        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
-          <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
-            <div className="relative bg-n-8 rounded-[1rem]">
-              <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
-
-              <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
-                {/* Imagen del robot */}
-                <img
-                  src={robot}
-                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
-                  width={1024}
-                  height={490}
-                  alt="AI"
-                />
-
-                {/* Animaciones y notificaciones con parallax */}
-                <ScrollParallax isAbsolutelyPositioned>
-                  <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
-                    {heroIcons.map((icon, index) => (
-                      <li className="p-5" key={index}>
-                        <img src={icon} width={24} height={25} alt={icon} />
-                      </li>
-                    ))}
-                  </ul>
-                </ScrollParallax>
-
-                <ScrollParallax isAbsolutelyPositioned>
-                  <Notification
-                    className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title="Code generation"
-                  />
-                </ScrollParallax>
-              </div>
-            </div>
-
-            {/* Gradiente decorativo */}
-            <Gradient />
-          </div>
-          {/* Fondo decorativo detrás del robot */}
-
-          {/* <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
-            <img
-              src={heroBackground}
-              className="w-full"
-              width={1440}
-              height={1800}
-              alt="hero"
-            />
-          </div> */}
-
-          {/* Círculos decorativos */}
-          <BackgroundCircles />
-        </div>
-
-        {/* Logos de empresas */}
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
+      {/* Fondo tipo Polar: spotlight + grid sutil */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        {/* Spotlight radial */}
+        <div className="absolute -top-24 -left-24 h-[55rem] w-[55rem] rounded-full opacity-[0.35] blur-3xl [background:radial-gradient(closest-side,rgba(239,68,68,0.25),transparent_70%)]" />
+        {/* Grid de puntos/líneas sutil */}
+        <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] [background-size:24px_24px] [mask-image:radial-gradient(closest-side,black,transparent)]" />
       </div>
 
-      {/* Línea decorativa inferior */}
-      <BottomLine />
+      <div className="container relative" ref={parallaxRef}>
+        <div className="grid items-center gap-10 lg:grid-cols-12">
+          {/* Columna izquierda */}
+          <div className="lg:col-span-6 text-center lg:text-left">
+            <span className="inline-flex items-center gap-2 rounded-full border border-red-200/60 bg-red-50 px-3 py-1 text-xs font-medium text-red-700">
+              <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
+              Nuevo: artículos y recursos contables
+            </span>
+
+            <h1 className="mt-5 text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl">
+              Explora las Posibilidades de Contabilidad con
+              <span className="relative inline-block pl-2">
+                <span className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 bg-clip-text text-transparent">
+                  {" "}
+                  ABC CONTAÉLITE
+                </span>
+                <img
+                  src={curve}
+                  alt="decor"
+                  width={624}
+                  height={28}
+                  className="pointer-events-none absolute top-full left-0 hidden w-full xl:block"
+                />
+              </span>
+            </h1>
+
+            <p className="mt-5 text-base text-gray-600 sm:text-lg">
+              Optimice la eficiencia y exactitud contable con soluciones
+              integrales. Descubra tendencias, consejos prácticos y estrategias
+              financieras.
+            </p>
+
+            <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+              <Button
+                href="#pricing"
+                className="bg-red-600 text-white shadow-lg shadow-red-600/20 hover:bg-red-700"
+              >
+                Empezar ahora
+              </Button>
+              <Button
+                href="#services"
+                variant="secondary"
+                className="border border-gray-300 bg-white text-gray-700 hover:bg-gray-50"
+              >
+                Ver servicios
+              </Button>
+            </div>
+
+            {/* Stats/Confianza */}
+            <dl className="mt-8 grid grid-cols-3 gap-4 text-center lg:text-left">
+              <div>
+                <dt className="text-xs text-gray-500">Exactitud</dt>
+                <dd className="text-xl font-semibold text-gray-900">99.9%</dd>
+              </div>
+              <div>
+                <dt className="text-xs text-gray-500">Clientes</dt>
+                <dd className="text-xl font-semibold text-gray-900">+1,200</dd>
+              </div>
+              <div>
+                <dt className="text-xs text-gray-500">Ahorro fiscal</dt>
+                <dd className="text-xl font-semibold text-gray-900">
+                  hasta 30%
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          {/* Columna derecha: imagen moderada tipo Polar */}
+          <div className="lg:col-span-6">
+            <div className="relative mx-auto max-w-xl lg:max-w-none">
+              <div className="relative overflow-hidden rounded-3xl ring-1 ring-black/10 shadow-xl">
+                <img
+                  src={robot}
+                  alt="AI"
+                  width={1200}
+                  height={900}
+                  className="h-[42vh] w-full object-contain bg-white md:h-[56vh] lg:h-[64vh]"
+                />
+                {/* Brillo superior */}
+                <div className="pointer-events-none absolute -top-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full opacity-40 blur-2xl [background:radial-gradient(closest-side,rgba(239,68,68,0.35),transparent)]" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </Section>
   );
 };

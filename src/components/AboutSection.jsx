@@ -1,6 +1,7 @@
 import { Users, Clock, Briefcase, Award } from "lucide-react";
 import { check } from "../assets";
 import Section from "./Section";
+import CompanyLogos from "./CompanyLogos";
 
 const AboutSection = () => {
   const cards = [
@@ -70,11 +71,18 @@ const AboutSection = () => {
               Nuestra Misión
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              En ABC ContaElite Rides SRL, creemos que cada empresa, sin importar su tamaño, merece tener acceso a servicios contables de la más alta calidad. 
-              Nuestra misión es simplificar la gestión financiera de las mipymes, proporcionando soluciones integrales que les permitan enfocarse en lo que mejor saben hacer: hacer crecer su negocio.
+              En ABC ContaElite Rides SRL, creemos que cada empresa, sin
+              importar su tamaño, merece tener acceso a servicios contables de
+              la más alta calidad. Nuestra misión es simplificar la gestión
+              financiera de las mipymes, proporcionando soluciones integrales
+              que les permitan enfocarse en lo que mejor saben hacer: hacer
+              crecer su negocio.
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
-              Con más de 8 años de experiencia en el sector, hemos desarrollado una metodología única que combina la experiencia tradicional con las últimas tecnologías, garantizando precisión, eficiencia y tranquilidad para nuestros clientes.
+              Con más de 8 años de experiencia en el sector, hemos desarrollado
+              una metodología única que combina la experiencia tradicional con
+              las últimas tecnologías, garantizando precisión, eficiencia y
+              tranquilidad para nuestros clientes.
             </p>
           </div>
 
@@ -86,13 +94,19 @@ const AboutSection = () => {
             <ul className="space-y-4">
               {valores.map((valor, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <img src={check} alt="check" className="w-6 h-6 mt-1 flex-shrink-0" />
+                  <img
+                    src={check}
+                    alt="check"
+                    className="w-6 h-6 mt-1 flex-shrink-0"
+                  />
                   <span className="leading-relaxed">{valor}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
+        {/* Logos de empresas */}
+        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
       </div>
     </Section>
   );
