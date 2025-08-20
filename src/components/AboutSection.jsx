@@ -35,7 +35,19 @@ const AboutSection = () => {
   ];
 
   return (
-    <Section className="bg-n-1" id="about" crosses={false}>
+    <Section
+      className="relative isolate overflow-hidden"
+      id="about"
+      crosses={false}
+    >
+      {/* Fondo tipo Polar */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        {/* Spotlight radial rojo más tenue que el hero */}
+        <div className="absolute top-1/2 left-1/3 h-[40rem] w-[40rem] -translate-y-1/2 rounded-full opacity-[0.35] blur-3xl [background:radial-gradient(closest-side,rgba(220,38,38,0.25),transparent_70%)]" />
+        {/* Grid de líneas */}
+        <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.04)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(closest-side,black,transparent)]" />
+      </div>
+
       <div className="container mx-auto px-4 text-center">
         {/* Título */}
         <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
@@ -53,7 +65,7 @@ const AboutSection = () => {
           {cards.map((card) => (
             <div
               key={card.id}
-              className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-center text-center shadow-md transition-all duration-300 lg:hover:shadow-xl"
+              className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-lg"
             >
               <div className="w-14 h-14 flex items-center justify-center bg-[#ff0400]/10 rounded-full mb-4">
                 {card.icon}
@@ -87,7 +99,7 @@ const AboutSection = () => {
           </div>
 
           {/* Nuestros Valores */}
-          <div className="rounded-[2rem] bg-gradient-to-r from-[#ff0400] to-[#a00000] text-white p-10 flex flex-col justify-center">
+          <div className="rounded-[2rem] bg-gradient-to-r from-[#ff0400] to-[#a00000] text-white p-10 flex flex-col justify-center shadow-lg shadow-red-900/20">
             <h3 className="text-2xl lg:text-3xl font-bold mb-6">
               Nuestros Valores
             </h3>
@@ -105,6 +117,7 @@ const AboutSection = () => {
             </ul>
           </div>
         </div>
+
         {/* Logos de empresas */}
         <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
       </div>

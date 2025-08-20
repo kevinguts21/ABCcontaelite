@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
+
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
@@ -11,6 +14,24 @@ import FloatingWhatsapp from "./components/FloatingWhatsapp";
 import AboutSection from "./components/AboutSection";
 
 const App = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 2.2,
+      smooth: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
