@@ -49,7 +49,7 @@ const Hero = () => {
             <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
               <Button href="#pricing">Empezar ahora</Button>
               <Button
-                href="#services"
+                href="#features"
                 variant="secondary"
                 className="border border-gray-300 bg-white text-gray-700 hover:bg-gray-50"
               >

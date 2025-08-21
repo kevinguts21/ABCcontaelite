@@ -16,7 +16,7 @@ import AboutSection from "./components/AboutSection";
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2.2,
+      duration: 1.2,
       smooth: true,
     });
 
