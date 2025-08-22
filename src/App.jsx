@@ -12,6 +12,7 @@ import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
 import AboutSection from "./components/AboutSection";
+import Reviews from "./components/Reviews";
 
 const App = () => {
   useEffect(() => {
@@ -42,7 +43,7 @@ const App = () => {
         <Collaboration />
         <Services />
         <Pricing />
-        <Roadmap />
+        <Reviews />
         <Footer />
       </div>
 

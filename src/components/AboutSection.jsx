@@ -43,9 +43,9 @@ const AboutSection = () => {
       {/* Fondo tipo Polar */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         {/* Spotlight radial rojo más tenue que el hero */}
-        <div className="absolute top-1/2 left-1/3 h-[40rem] w-[40rem] -translate-y-1/2 rounded-full opacity-[0.35] blur-3xl [background:radial-gradient(closest-side,rgba(220,38,38,0.25),transparent_70%)]" />
+        <div className="absolute top-1/2 left-1/3 h-[50rem] w-[50rem] -translate-y-1/2 rounded-full opacity-[0.35] blur-2xl [background:radial-gradient(closest-side,rgba(255,64,64,0.5),transparent_80%)]" />
         {/* Grid de líneas */}
-        <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.04)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(closest-side,black,transparent)]" />
+        <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)] [background-size:22px_22px] [mask-image:radial-gradient(closest-side,black,transparent)]" />
       </div>
 
       <div className="container mx-auto px-4 text-center">

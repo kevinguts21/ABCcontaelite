@@ -69,13 +69,9 @@ const Collaboration = () => {
                 title: "Reportes financieros en tiempo real",
                 text: "Visualiza balances, ingresos y gastos actualizados desde cualquier dispositivo.",
               },
+
               {
                 id: 2,
-                title: "Automatización de procesos",
-                text: "Facturación, conciliación bancaria y control de inventario de forma automática.",
-              },
-              {
-                id: 3,
                 title: "Cumplimiento tributario",
                 text: "Asegura la correcta presentación de impuestos y obligaciones fiscales.",
               },
@@ -87,7 +83,9 @@ const Collaboration = () => {
                     {item.title}
                   </h6>
                 </div>
-                {item.text && <p className="body-2 mt-3 text-gray-700">{item.text}</p>}
+                {item.text && (
+                  <p className="body-2 mt-3 text-gray-700">{item.text}</p>
+                )}
               </li>
             ))}
           </ul>
@@ -98,14 +96,21 @@ const Collaboration = () => {
         {/* Columna derecha */}
         <div ref={rightRef} className="lg:ml-auto xl:w-[38rem] mt-4 opacity-0">
           <p className="body-2 mb-8 text-gray-700 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
-            Centraliza la gestión de tu empresa con una solución contable en la nube. Controla ingresos, gastos, impuestos y facturación desde un mismo lugar, optimizando tu tiempo y reduciendo errores.
+            Centraliza la gestión de tu empresa con una solución contable en la
+            nube. Controla ingresos, gastos, impuestos y facturación desde un
+            mismo lugar, optimizando tu tiempo y reduciendo errores.
           </p>
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
-                  <img src={brainwaveSymbol} width={48} height={48} alt="Logo_abc" />
+                  <img
+                    src={brainwaveSymbol}
+                    width={48}
+                    height={48}
+                    alt="Logo_abc"
+                  />
                 </div>
               </div>
             </div>
@@ -114,12 +119,22 @@ const Collaboration = () => {
               {collabApps.map((app, index) => (
                 <li
                   key={app.id}
-                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${index * 45}`}
+                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
+                    index * 45
+                  }`}
                 >
                   <div
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${index * 45}`}
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                      index * 45
+                    }`}
                   >
-                    <img className="m-auto" width={app.width} height={app.height} alt={app.title} src={app.icon} />
+                    <img
+                      className="m-auto"
+                      width={app.width}
+                      height={app.height}
+                      alt={app.title}
+                      src={app.icon}
+                    />
                   </div>
                 </li>
               ))}

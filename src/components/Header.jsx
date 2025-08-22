@@ -5,7 +5,6 @@ import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 import { abc_logo } from "../assets";
 import { navigation } from "../constants";
-import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
@@ -16,25 +15,24 @@ const Header = () => {
 
   // Abre/cierra el menú de navegación móvil y bloquea/desbloquea el scroll
   const toggleNavigation = () => {
-  if (openNavigation) {
-    setOpenNavigation(false);
-    enablePageScroll();
-  } else {
-    setOpenNavigation(true);
-    disablePageScroll();
+    if (openNavigation) {
+      setOpenNavigation(false);
+      enablePageScroll();
+    } else {
+      setOpenNavigation(true);
+      disablePageScroll();
 
-    // Solo ítems visibles en móvil (considerando la prop onlyMobile)
-    const visibleItems = navigation.filter(
-      item => !item.onlyMobile || window.innerWidth < 1024
-    );
+      // Solo ítems visibles en móvil (considerando la prop onlyMobile)
+      const visibleItems = navigation.filter(
+        (item) => !item.onlyMobile || window.innerWidth < 1024
+      );
 
-    console.log("Menú móvil abierto. Ítems visibles:");
-    visibleItems.forEach(item => {
-      console.log(`- ${item.title} (${item.url})`);
-    });
-  }
-};
-
+      console.log("Menú móvil abierto. Ítems visibles:");
+      visibleItems.forEach((item) => {
+        console.log(`- ${item.title} (${item.url})`);
+      });
+    }
+  };
 
   // Cierra el menú al hacer click en un enlace
   const handleClick = () => {
@@ -98,13 +96,13 @@ const Header = () => {
         </Button> */}
 
         {/* Botón para abrir/cerrar menú móvil */}
-        <Button
-          className="ml-auto lg:hidden"
-          px="px-3"
+        {/* Botón para abrir/cerrar menú móvil */}
+        <button
+          className="ml-auto lg:hidden p-2 focus:outline-none"
           onClick={toggleNavigation}
         >
           <MenuSvg openNavigation={openNavigation} />
-        </Button>
+        </button>
       </div>
     </div>
   );

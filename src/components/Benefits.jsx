@@ -8,21 +8,23 @@ import Section from "./Section";
 gsap.registerPlugin(ScrollTrigger);
 
 const Benefits = () => {
-  const titleRef = useRef(null);
+  const cardsRef = useRef([]);
 
   useEffect(() => {
-    if (titleRef.current) {
+    if (cardsRef.current.length > 0) {
       gsap.fromTo(
-        titleRef.current,
-        { y: 50, opacity: 0 },
+        cardsRef.current,
+        { y: 60, opacity: 0, rotateX: -15 },
         {
           y: 0,
           opacity: 1,
-          duration: 1.2,
+          rotateX: 0,
+          duration: 1,
           ease: "power3.out",
+          stagger: 0.15,
           scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 80%", // cuando el título entre al viewport
+            trigger: cardsRef.current[0],
+            start: "top 85%",
           },
         }
       );
@@ -33,44 +35,91 @@ const Benefits = () => {
     <Section id="features" className="relative isolate overflow-hidden">
       {/* Fondo Polar */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/3 h-[40rem] w-[40rem] -translate-y-1/2 rounded-full opacity-[0.25] blur-3xl [background:radial-gradient(closest-side,rgba(255,64,64,0.3),transparent_70%)]" />
-        <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.02)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(closest-side,black,transparent)]" />
+        <div className="absolute top-1/2 left-1/3 h-[50rem] w-[50rem] -translate-y-1/2 rounded-full opacity-[0.25] blur-[150px] [background:radial-gradient(closest-side,rgba(255,64,64,0.25),transparent_80%)]" />
+        <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.03)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(closest-side,black,transparent)]" />
       </div>
 
-      <div className="container relative z-2">
-        {/* Título animado con gsap */}
-        <div ref={titleRef}>
-          <Heading
-            className="md:max-w-md lg:max-w-2xl font-bold text-black"
-            title="Lleva tu contabilidad más allá con soluciones inteligentes"
-          />
-        </div>
+      <div className="container relative z-10">
+        {/* Título sin animación */}
+        <Heading
+          className="md:max-w-md lg:max-w-2xl font-bold text-black text-center mb-12"
+          title="Lleva tu contabilidad más allá con soluciones inteligentes"
+        />
 
-        {/* Cards */}
-        <div className="flex flex-wrap gap-10 mb-10">
-          {benefits.map((item) => (
-            <div
-              key={item.id}
-              className="group relative md:max-w-[24rem] rounded-3xl overflow-hidden transition-all"
-            >
-              <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out blur-2xl [background:radial-gradient(circle_at_center,rgba(255,64,64,0.35),transparent_70%)]" />
-              <div className="relative z-10 flex flex-col h-[22rem] p-[2.4rem] bg-white border border-gray-200 rounded-3xl shadow-sm transition-transform transition-shadow duration-300 ease-out lg:group-hover:-translate-y-1 lg:group-hover:shadow-lg lg:group-hover:shadow-red-500/30">
-                <h5 className="h5 mb-5 font-bold text-black transition-colors duration-500 ease-out group-hover:text-red-600">
-                  {item.title}
-                </h5>
-                <p className="body-2 mb-6 text-gray-600">{item.text}</p>
-                <div className="flex items-center mt-auto">
-                  <img
-                    src={item.iconUrl}
-                    width={48}
-                    height={48}
-                    alt={item.title}
-                    className="transition-transform duration-300 ease-in-out group-hover:scale-110"
-                  />
+        {/* Layout tipo imagen */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {/* Columna izquierda con 4 cards pequeñas */}
+          <div className="grid grid-cols-2 gap-6">
+            {benefits.slice(0, 4).map((item, i) => (
+              <div
+                key={item.id}
+                ref={(el) => (cardsRef.current[i] = el)}
+                className="group relative rounded-3xl overflow-hidden transition-all"
+              >
+                {/* Spotlight discreto */}
+                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out blur-[80px] [background:radial-gradient(circle_at_center,rgba(255,64,64,0.15),transparent_80%)]" />
+
+                <div className="relative z-10 flex flex-col h-[17rem] p-6 bg-white border border-gray-200 rounded-3xl shadow-sm transition-transform transition-shadow duration-300 ease-out lg:group-hover:-translate-y-1 lg:group-hover:shadow-lg lg:group-hover:shadow-red-400/20">
+                  <h5 className="font-semibold text-black mb-3 group-hover:text-red-600 transition-colors duration-500">
+                    {item.title}
+                  </h5>
+                  <p className="text-sm text-gray-600 flex-grow">{item.text}</p>
+                  <div className="mt-4">
+                    <img
+                      src={item.iconUrl}
+                      width={42}
+                      height={42}
+                      alt={item.title}
+                      className="transition-transform duration-300 ease-in-out group-hover:scale-110"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Columna derecha con 2 cards grandes enriquecidas */}
+          <div className="grid grid-rows-2 gap-6">
+            {benefits.slice(4, 6).map((item, i) => (
+              <div
+                key={item.id}
+                ref={(el) => (cardsRef.current[i + 4] = el)}
+                className="group relative rounded-3xl overflow-hidden transition-all"
+              >
+                {/* Spotlight discreto igual al de pequeñas */}
+                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out blur-3xl [background:radial-gradient(closest-side,rgba(255,64,64,0.25),transparent_80%)]" />
+
+                <div className="relative z-10 flex flex-col h-[17rem] p-8 bg-white border border-gray-200 rounded-3xl shadow-sm transition-transform transition-shadow duration-300 ease-out lg:group-hover:-translate-y-1 lg:group-hover:shadow-lg lg:group-hover:shadow-red-400/20">
+                  <h5 className="text-lg font-bold text-black mb-4 group-hover:text-red-600 transition-colors duration-500">
+                    {item.title}
+                  </h5>
+                  <p className="text-base text-gray-600 flex-grow">
+                    {item.text}
+                  </p>
+
+                  {/* Elementos enriquecidos que aparecen al hover */}
+                  <div className="mt-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <span className="px-3 py-1 text-xs rounded-full bg-red-50 text-red-600 border border-red-200">
+                      Optimizado
+                    </span>
+                    <span className="px-3 py-1 text-xs rounded-full bg-red-50 text-red-600 border border-red-200">
+                      Seguro
+                    </span>
+                  </div>
+
+                  <div className="mt-6">
+                    <img
+                      src={item.iconUrl}
+                      width={48}
+                      height={48}
+                      alt={item.title}
+                      className="transition-transform duration-300 ease-in-out group-hover:scale-110"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Section>

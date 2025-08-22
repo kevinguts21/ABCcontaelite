@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import Section from "./Section";
-import { smallSphere, stars,abc_icon} from "../assets";
+import { smallSphere, abc_icon } from "../assets"; // removí stars
 import Heading from "./Heading";
 import PricingList from "./PricingList";
 import { LeftLine, RightLine } from "./design/Pricing";
 
-
 const Pricing = () => {
-  const sphereRef = useRef(null); // Referencia al sphere
-  const [rotation, setRotation] = useState(0); // Ángulo en grados
+  const sphereRef = useRef(null);
+  const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
     let ticking = false;
@@ -16,11 +15,9 @@ const Pricing = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          // Calcula la rotación según el scroll vertical
-          // Puedes ajustar el factor multiplicador para más o menos giro
           const scrollY = window.scrollY || window.pageYOffset;
-          const rotateAngle = scrollY * 0.1; // Por ejemplo, 0.1 grados por pixel desplazado
-          setRotation(rotateAngle % 360); // Limita a 0-360°
+          const rotateAngle = scrollY * 0.1;
+          setRotation(rotateAngle % 360);
           ticking = false;
         });
         ticking = true;
@@ -32,51 +29,42 @@ const Pricing = () => {
   }, []);
 
   return (
-    <Section className="overflow-hidden" id="pricing">
+    <Section className="overflow-hidden py-16" id="pricing">
       <div className="container relative z-2">
-        {/* Decoraciones visuales: esfera y sustituyendo el img con ref y rotación */}
-        <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
-          {/* Contenedor relativo para superposición */}
+        {/* Decoración esfera girando */}
+        <div className="hidden relative justify-center mb-12 lg:flex">
           <div className="relative">
             <img
               ref={sphereRef}
               src={smallSphere}
               className="relative z-1"
-              width={255}
-              height={255}
+              width={180}
+              height={180}
               alt="Sphere"
               style={{
                 transform: `rotate(${rotation}deg)`,
                 transition: "transform 0.01s linear",
               }}
             />
-            {/* abc_icon superpuesto, centrado */}
-           
-          </div>
-          <div className="absolute top-1/2 left-1/2 w-[60rem] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-            <img
-              src={stars}
-              className="w-full"
-              width={950}
-              height={400}
-              alt="Stars"
-            />
           </div>
         </div>
 
-        {/* Título y subtítulo */}
-        <Heading tag="Empezar con ABC CONTAÉLITE" title="Acceda a nuestros servicios" />
+        {/* Título */}
+        <Heading
+          tag="Empieza con ABC CONTAÉLITE"
+          title="Accede a nuestros servicios"
+        />
 
-        {/* Lista de precios y líneas decorativas */}
-        <div className="relative">
+        {/* Lista de precios */}
+        <div className="relative mt-8">
           <PricingList />
           <LeftLine />
           <RightLine />
         </div>
 
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-8">
           <a
-            className="text-xs font-code font-bold text-black tracking-wider uppercase border-b"
+            className="text-[10px] font-code font-bold text-black tracking-wider uppercase border-b"
             href="/pricing"
           >
             Ver todos los detalles
