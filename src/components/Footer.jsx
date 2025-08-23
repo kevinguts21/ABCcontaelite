@@ -215,7 +215,7 @@ const Footer = () => {
       {/* Botón scroll arriba con animación */}
       <div
         onClick={scrollToTop}
-        className="absolute bottom-4 right-6 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-700 transition animate-pulse"
+        className="absolute bottom-4 right-6 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center cursor-pointer yhover:bg-red-700 transition animate-pulse"
       >
         <img src={arrow_up} alt="Subir" className="w-6 h-6 invert" />
       </div>
