@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
+import ContactSection from "./components/Contact";
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
@@ -44,6 +45,8 @@ const App = () => {
         <Services />
         <Pricing />
         <Reviews />
+        <Roadmap/>
+        <ContactSection/>
         <Footer />
       </div>
 

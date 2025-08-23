@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { socials, navigation } from "../constants";
+import { navigation } from "../constants";
 import { abc_logo, arrow_up } from "../assets";
-import { Phone, Mail, MapPin } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "lucide-react";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -18,6 +26,13 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const socials = [
+    { id: "facebook", url: "https://facebook.com", icon: Facebook, title: "Facebook" },
+    { id: "instagram", url: "https://instagram.com", icon: Instagram, title: "Instagram" },
+    { id: "linkedin", url: "https://linkedin.com", icon: Linkedin, title: "LinkedIn" },
+    { id: "twitter", url: "https://twitter.com", icon: Twitter, title: "Twitter" },
+  ];
+
   return (
     <footer id="footer" className="relative bg-[#101828] text-white py-12 px-6">
       {isMobile ? (
@@ -25,16 +40,16 @@ const Footer = () => {
         <div>
           {/* Redes sociales */}
           <ul className="flex gap-4 mb-6">
-            {socials.map(({ id, url, iconUrl, title }) => (
+            {socials.map(({ id, url, icon: Icon, title }) => (
               <li key={id}>
                 <a
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={title}
-                  className="flex items-center justify-center w-10 h-10 bg-white/10 rounded-full transition-colors hover:bg-red-600"
+                  className="flex items-center justify-center w-10 h-10 bg-white/10 rounded-full transition-colors hover:bg-red-600 group"
                 >
-                  <img src={iconUrl} alt={title} width={24} height={24} />
+                  <Icon className="w-5 h-5 text-white group-hover:text-white" />
                 </a>
               </li>
             ))}
@@ -167,16 +182,16 @@ const Footer = () => {
 
           {/* Redes sociales */}
           <ul className="flex gap-4">
-            {socials.map(({ id, url, iconUrl, title }) => (
+            {socials.map(({ id, url, icon: Icon, title }) => (
               <li key={id}>
                 <a
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={title}
-                  className="flex items-center justify-center w-10 h-10 bg-white/10 rounded-full transition-colors hover:bg-red-600"
+                  className="flex items-center justify-center w-10 h-10 bg-white/10 rounded-full transition-colors hover:bg-red-600 group"
                 >
-                  <img src={iconUrl} alt={title} width={24} height={24} />
+                  <Icon className="w-5 h-5 text-white group-hover:text-white" />
                 </a>
               </li>
             ))}
@@ -184,20 +199,25 @@ const Footer = () => {
         </div>
       )}
 
-      {/* Derechos reservados debajo */}
-      <div className="mt-8 text-center">
-        <br />
-        <p className="text-white/50 text-xs">
-          © {new Date().getFullYear()}. All rights reserved.
+      {/* Derechos reservados con links legales */}
+      <div className="mt-8 text-center border-t border-white/10 pt-6">
+        <p className="text-white/60 text-xs">
+          © 2025 <span className="font-semibold text-red-500">ABC ContaElite Rides SRL</span>. Todos los derechos reservados.
         </p>
+        <div className="flex justify-center gap-6 mt-3 text-xs text-white/60">
+          <a href="#" className="hover:text-red-500">Términos y Condiciones</a>
+          <a href="#" className="hover:text-red-500">Política de Privacidad</a>
+          <a href="#" className="hover:text-red-500">Aviso Legal</a>
+          <a href="#" className="hover:text-red-500">Cookies</a>
+        </div>
       </div>
 
-      {/* Botón scroll arriba */}
+      {/* Botón scroll arriba con animación */}
       <div
         onClick={scrollToTop}
-        className="absolute bottom-4 right-6 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center cursor-pointer shadow-lg hover:bg-red-600 transition-colors"
+        className="absolute bottom-4 right-6 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-700 transition animate-pulse"
       >
-        <img src={arrow_up} alt="Subir" className="w-6 h-6" />
+        <img src={arrow_up} alt="Subir" className="w-6 h-6 invert" />
       </div>
     </footer>
   );
