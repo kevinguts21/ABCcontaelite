@@ -14,16 +14,15 @@ const Benefits = () => {
     if (cardsRef.current.length > 0) {
       gsap.fromTo(
         cardsRef.current,
-        { y: 60, opacity: 0, rotateX: -15 },
+        { y: 60, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          rotateX: 0,
           duration: 1,
-          ease: "power3.out",
           stagger: 0.15,
+          ease: "power3.out",
           scrollTrigger: {
-            trigger: cardsRef.current[0],
+            trigger: cardsRef.current[0].parentNode,
             start: "top 85%",
           },
         }
@@ -35,18 +34,19 @@ const Benefits = () => {
     <Section id="features" className="relative isolate overflow-hidden">
       {/* Fondo Polar */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/3 h-[50rem] w-[50rem] -translate-y-1/2 rounded-full opacity-[0.25] blur-[150px] [background:radial-gradient(closest-side,rgba(255,64,64,0.25),transparent_80%)]" />
+        <div className="absolute top-1/2 left-1/3 h-[45rem] w-[45rem] -translate-y-1/2 rounded-full opacity-[0.2] blur-3xl [background:radial-gradient(closest-side,rgba(255,64,64,0.25),transparent_75%)]" />
         <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.03)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(closest-side,black,transparent)]" />
       </div>
 
       <div className="container relative z-10">
-        {/* Título sin animación */}
+        {/* Título */}
         <Heading
-          className="md:max-w-md lg:max-w-2xl font-bold text-black text-center mb-12"
+          className="md:max-w-md lg:max-w-2xl font-bold text-black text-center mb-6"
+          tag="Beneficios de trabajar con nosotros"
           title="Lleva tu contabilidad más allá con soluciones inteligentes"
         />
 
-        {/* Layout tipo imagen */}
+        {/* Grid principal */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Columna izquierda con 4 cards pequeñas */}
           <div className="grid grid-cols-2 gap-6">
@@ -54,69 +54,60 @@ const Benefits = () => {
               <div
                 key={item.id}
                 ref={(el) => (cardsRef.current[i] = el)}
-                className="group relative rounded-3xl overflow-hidden transition-all"
+                className="relative review-card bg-white p-6 rounded-3xl shadow-sm border border-gray-200 transition-all duration-500 hover:shadow-lg hover:shadow-red-500/20 hover:-translate-y-1"
               >
-                {/* Spotlight discreto */}
-                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out blur-[80px] [background:radial-gradient(circle_at_center,rgba(255,64,64,0.15),transparent_80%)]" />
-
-                <div className="relative z-10 flex flex-col h-[17rem] p-6 bg-white border border-gray-200 rounded-3xl shadow-sm transition-transform transition-shadow duration-300 ease-out lg:group-hover:-translate-y-1 lg:group-hover:shadow-lg lg:group-hover:shadow-red-400/20">
-                  <h5 className="font-semibold text-black mb-3 group-hover:text-red-600 transition-colors duration-500">
-                    {item.title}
-                  </h5>
-                  <p className="text-sm text-gray-600 flex-grow">{item.text}</p>
-                  <div className="mt-4">
-                    <img
-                      src={item.iconUrl}
-                      width={42}
-                      height={42}
-                      alt={item.title}
-                      className="transition-transform duration-300 ease-in-out group-hover:scale-110"
-                    />
-                  </div>
+                {/* Ícono */}
+                <div className="mb-4">
+                  <img
+                    src={item.iconUrl}
+                    width={42}
+                    height={42}
+                    alt={item.title}
+                    className="transition-transform duration-300 ease-in-out group-hover:scale-110"
+                  />
                 </div>
+
+                {/* Texto */}
+                <h5 className="font-semibold text-black mb-2">{item.title}</h5>
+                <p className="text-sm text-gray-600">{item.text}</p>
               </div>
             ))}
           </div>
 
-          {/* Columna derecha con 2 cards grandes enriquecidas */}
+          {/* Columna derecha con 2 cards grandes */}
           <div className="grid grid-rows-2 gap-6">
             {benefits.slice(4, 6).map((item, i) => (
               <div
                 key={item.id}
                 ref={(el) => (cardsRef.current[i + 4] = el)}
-                className="group relative rounded-3xl overflow-hidden transition-all"
+                className="relative review-card bg-white p-8 rounded-3xl shadow-sm border border-gray-200 transition-all duration-500 hover:shadow-xl hover:shadow-red-500/30 hover:-translate-y-1"
               >
-                {/* Spotlight discreto igual al de pequeñas */}
-                <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out blur-3xl [background:radial-gradient(closest-side,rgba(255,64,64,0.25),transparent_80%)]" />
-
-                <div className="relative z-10 flex flex-col h-[17rem] p-8 bg-white border border-gray-200 rounded-3xl shadow-sm transition-transform transition-shadow duration-300 ease-out lg:group-hover:-translate-y-1 lg:group-hover:shadow-lg lg:group-hover:shadow-red-400/20">
-                  <h5 className="text-lg font-bold text-black mb-4 group-hover:text-red-600 transition-colors duration-500">
-                    {item.title}
-                  </h5>
-                  <p className="text-base text-gray-600 flex-grow">
-                    {item.text}
-                  </p>
-
-                  {/* Elementos enriquecidos que aparecen al hover */}
-                  <div className="mt-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <span className="px-3 py-1 text-xs rounded-full bg-red-50 text-red-600 border border-red-200">
-                      Optimizado
-                    </span>
-                    <span className="px-3 py-1 text-xs rounded-full bg-red-50 text-red-600 border border-red-200">
-                      Seguro
-                    </span>
-                  </div>
-
-                  <div className="mt-6">
-                    <img
-                      src={item.iconUrl}
-                      width={48}
-                      height={48}
-                      alt={item.title}
-                      className="transition-transform duration-300 ease-in-out group-hover:scale-110"
-                    />
-                  </div>
+                {/* Etiquetas extra en hover */}
+                <div className="absolute top-4 right-4 flex gap-2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <span className="px-3 py-1 text-xs rounded-full bg-red-50 text-red-600 border border-red-200">
+                    Optimizado
+                  </span>
+                  <span className="px-3 py-1 text-xs rounded-full bg-red-50 text-red-600 border border-red-200">
+                    Seguro
+                  </span>
                 </div>
+
+                {/* Icono */}
+                <div className="mb-5">
+                  <img
+                    src={item.iconUrl}
+                    width={52}
+                    height={52}
+                    alt={item.title}
+                    className="transition-transform duration-300 ease-in-out hover:scale-110"
+                  />
+                </div>
+
+                {/* Texto */}
+                <h5 className="text-lg font-bold text-black mb-3">
+                  {item.title}
+                </h5>
+                <p className="text-base text-gray-600">{item.text}</p>
               </div>
             ))}
           </div>

@@ -20,7 +20,7 @@ const Roadmap = () => (
     <div className="container relative z-10 md:pb-10">
       {/* Título */}
       <Heading
-        tag="Listos para empezar"
+        tag="Próximamente"
         title="En qué estamos trabajando"
         className="text-red-600"
       />
