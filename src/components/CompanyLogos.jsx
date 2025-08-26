@@ -37,7 +37,7 @@ const CompanyLogos = ({ className }) => {
 
   return (
     <div className={`${className} overflow-hidden relative`}>
-      <h4 className="tagline mb-4 text-center font-bold text-black text-xl">
+      <h4 className="tagline mb-12 text-center font-bold text-black text-xl">
         Empresas que nos avalan
       </h4>
 

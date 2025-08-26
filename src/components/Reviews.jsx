@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Section from "./Section";
+import CompanyLogos from "./CompanyLogos";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -142,17 +143,8 @@ const Reviews = () => {
         </div>
 
         {/* Empresas que nos avalan */}
-        <div className="mt-20 text-center text-gray-500">
-          <p className="text-sm uppercase tracking-wide mb-4">
-            Empresas que nos avalan
-          </p>
-          <div className="flex justify-center gap-10 opacity-80">
-            <span className="font-bold text-gray-400">Coca Cola</span>
-            <span className="font-bold text-gray-400">Banco Nacional</span>
-            <span className="font-bold text-gray-400">Movistar</span>
-            <span className="font-bold text-gray-400">Claro</span>
-          </div>
-        </div>
+
+        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
       </div>
     </Section>
   );

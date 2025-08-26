@@ -1,7 +1,6 @@
 import { Users, Clock, Briefcase, Award } from "lucide-react";
 import { check } from "../assets";
 import Section from "./Section";
-import CompanyLogos from "./CompanyLogos";
 
 const AboutSection = () => {
   const cards = [
@@ -118,8 +117,6 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Logos de empresas */}
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
       </div>
     </Section>
   );
