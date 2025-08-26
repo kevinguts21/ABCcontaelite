@@ -85,6 +85,9 @@ import arrow_up from "./footer/arrow_up.svg";
 import cliref from "./companylogos/cliref.png";
 import ruedas_caiman from "./companylogos/ruedas_caiman.png";
 import unaicc from "./companylogos/unaicc.png";
+import dujo from "./companylogos/dujo.png"
+import preger from "./companylogos/preger.png"
+import quintana from "./companylogos/quintana.png"
 
 export {
   abc_icon,
@@ -163,4 +166,7 @@ export {
   ruedas_caiman,
   unaicc,
   excel,
+  quintana,
+  preger,
+  dujo,
 };
