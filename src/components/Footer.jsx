@@ -27,10 +27,30 @@ const Footer = () => {
   };
 
   const socials = [
-    { id: "facebook", url: "https://facebook.com", icon: Facebook, title: "Facebook" },
-    { id: "instagram", url: "https://instagram.com", icon: Instagram, title: "Instagram" },
-    { id: "linkedin", url: "https://linkedin.com", icon: Linkedin, title: "LinkedIn" },
-    { id: "twitter", url: "https://twitter.com", icon: Twitter, title: "Twitter" },
+    {
+      id: "facebook",
+      url: "https://facebook.com",
+      icon: Facebook,
+      title: "Facebook",
+    },
+    {
+      id: "instagram",
+      url: "https://instagram.com",
+      icon: Instagram,
+      title: "Instagram",
+    },
+    {
+      id: "linkedin",
+      url: "https://linkedin.com",
+      icon: Linkedin,
+      title: "LinkedIn",
+    },
+    {
+      id: "twitter",
+      url: "https://twitter.com",
+      icon: Twitter,
+      title: "Twitter",
+    },
   ];
 
   return (
@@ -79,6 +99,18 @@ const Footer = () => {
             ))}
           </ul>
 
+          {/* Botón trabaja con nosotros */}
+          <div className="mb-6">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdO7WWWp3uhJPCtatOx3xqtCHAf3o9n47_kuyTfmcIodJqSaA/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700 transition"
+            >
+              Trabaja con nosotros
+            </a>
+          </div>
+
           {/* Contacto */}
           <div>
             <p className="font-bold mb-3">Contáctanos</p>
@@ -105,7 +137,7 @@ const Footer = () => {
                 abccontaelite.oficial@gmail.com
               </a>
               <a
-                href="https://maps.app.goo.gl/ur1xgh4gmEgrass76"
+                href="https://www.google.com/maps/place/MPM+ABC+ContaElite+Rides+S.R.L/@23.0806402,-82.3959989,19.94z/data=!4m15!1m8!3m7!1s0x88cd774cbdf600e1:0x4e294d7e1a770d60!2sLa+Habana,+Cuba!3b1!8m2!3d23.133865!4d-82.3585654!16zL20vMGQ2aG4!3m5!1s0x88cd716d3b16baf5:0x1314461f5864c245!8m2!3d23.0804998!4d-82.3961098!16s%2Fg%2F11krkwqfws?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
@@ -130,18 +162,29 @@ const Footer = () => {
           </div>
 
           {/* Navegación */}
-          <ul className="space-y-2">
-            {navigation.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={item.url}
-                  className="text-white hover:text-red-600 transition-colors"
-                >
-                  {item.title}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div>
+            <ul className="space-y-2 mb-4">
+              {navigation.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={item.url}
+                    className="text-white hover:text-red-600 transition-colors"
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            {/* Botón trabaja con nosotros */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdO7WWWp3uhJPCtatOx3xqtCHAf3o9n47_kuyTfmcIodJqSaA/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700 transition"
+            >
+              Trabaja con nosotros
+            </a>
+          </div>
 
           {/* Contacto */}
           <div>
@@ -169,7 +212,7 @@ const Footer = () => {
                 abccontaelite.oficial@gmail.com
               </a>
               <a
-                href="https://maps.app.goo.gl/ur1xgh4gmEgrass76"
+                href="https://www.google.com/maps/place/MPM+ABC+ContaElite+Rides+S.R.L/@23.0806402,-82.3959989,19.94z/data=!4m15!1m8!3m7!1s0x88cd774cbdf600e1:0x4e294d7e1a770d60!2sLa+Habana,+Cuba!3b1!8m2!3d23.133865!4d-82.3585654!16zL20vMGQ2aG4!3m5!1s0x88cd716d3b16baf5:0x1314461f5864c245!8m2!3d23.0804998!4d-82.3961098!16s%2Fg%2F11krkwqfws?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
@@ -202,20 +245,32 @@ const Footer = () => {
       {/* Derechos reservados con links legales */}
       <div className="mt-8 text-center border-t border-white/10 pt-6">
         <p className="text-white/60 text-xs">
-          © 2025 <span className="font-semibold text-red-500">ABC ContaElite Rides SRL</span>. Todos los derechos reservados.
+          © 2025{" "}
+          <span className="font-semibold text-red-500">
+            ABC ContaElite Rides SRL
+          </span>
+          . Todos los derechos reservados.
         </p>
         <div className="flex justify-center gap-6 mt-3 text-xs text-white/60">
-          <a href="#" className="hover:text-red-500">Términos y Condiciones</a>
-          <a href="#" className="hover:text-red-500">Política de Privacidad</a>
-          <a href="#" className="hover:text-red-500">Aviso Legal</a>
-          <a href="#" className="hover:text-red-500">Cookies</a>
+          <a href="#" className="hover:text-red-500">
+            Términos y Condiciones
+          </a>
+          <a href="#" className="hover:text-red-500">
+            Política de Privacidad
+          </a>
+          <a href="#" className="hover:text-red-500">
+            Aviso Legal
+          </a>
+          <a href="#" className="hover:text-red-500">
+            Cookies
+          </a>
         </div>
       </div>
 
       {/* Botón scroll arriba con animación */}
       <div
         onClick={scrollToTop}
-        className="absolute bottom-4 right-6 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center cursor-pointer yhover:bg-red-700 transition animate-pulse"
+        className="absolute bottom-4 right-6 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-700 transition animate-pulse"
       >
         <img src={arrow_up} alt="Subir" className="w-6 h-6 invert" />
       </div>
