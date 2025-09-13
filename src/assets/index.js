@@ -31,13 +31,13 @@ import heroBackground from "./hero/hero-background.jpg";
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
 import discord from "./collaboration/discord.png";
-import figma from "./collaboration/figma.png";
+import figma from "./collaboration/odoo.png";
 import framer from "./collaboration/framer.png";
 import notion from "./collaboration/notion.png";
-import photoshop from "./collaboration/photoshop.png";
-import protopie from "./collaboration/protopie.png";
-import raindrop from "./collaboration/raindrop.png";
-import slack from "./collaboration/slack.png";
+import photoshop from "./collaboration/versat.png";
+import protopie from "./collaboration/power-bi.png";
+import raindrop from "./collaboration/power.png";
+import slack from "./collaboration/word.png";
 import excel from "./collaboration/excel.png";
 
 import service1 from "./services/business.png";
@@ -71,6 +71,8 @@ import benefitIcon1 from "./benefits/icon-1.svg";
 import benefitIcon2 from "./benefits/icon-2.svg";
 import benefitIcon3 from "./benefits/icon-3.svg";
 import benefitIcon4 from "./benefits/icon-4.svg";
+import benefitIcon5 from "./benefits/icon-5.svg";
+import benefitIcon6 from "./benefits/icon-6.svg"
 import benefitImage2 from "./benefits/abc_icon.png";
 
 import facebook from "./socials/facebook.svg";
@@ -154,6 +156,8 @@ export {
   benefitIcon2,
   benefitIcon3,
   benefitIcon4,
+  benefitIcon5,
+  benefitIcon6,
   benefitImage2,
   facebook,
   instagram,

@@ -7,12 +7,12 @@ const AboutSection = () => {
   const cards = [
     {
       id: 1,
-      title: "Más de 500 clientes satisfechos",
+      title: "Más de 30 clientes satisfechos",
       icon: <Users className="w-7 h-7 text-[#ff0400]" />,
     },
     {
       id: 2,
-      title: "+8 años de experiencia",
+      title: "+5 años de experiencia",
       icon: <Clock className="w-7 h-7 text-[#ff0400]" />,
     },
     {
@@ -57,7 +57,8 @@ const AboutSection = () => {
         {/* Subtítulo */}
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
           Somos una empresa especializada en servicios contables para mipymes,
-          comprometida con el crecimiento y éxito de nuestros clientes.
+          CNA, TCP y empresas estatales comprometida con el crecimiento y éxito
+          de nuestros clientes.
         </p>
 
         {/* Grid de Cards */}
@@ -80,21 +81,24 @@ const AboutSection = () => {
           {/* Nuestra Misión */}
           <div className="flex flex-col justify-center">
             <h3 className="text-2xl lg:text-3xl font-bold text-black mb-6">
-              Nuestra Misión
+              ¿Qué nos distingue?
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              En ABC ContaElite Rides SRL, creemos que cada empresa, sin
-              importar su tamaño, merece tener acceso a servicios contables de
-              la más alta calidad. Nuestra misión es simplificar la gestión
-              financiera de las mipymes, proporcionando soluciones integrales
-              que les permitan enfocarse en lo que mejor saben hacer: hacer
-              crecer su negocio.
+              La capacidad y posibilidad de realizar nuestro trabajo en las
+              instalaciones y equipos de nuestros clientes o en locales de
+              trabajo propios de la empresa proveedora de los servicios. La
+              profesionalidad de sus integrantes donde puedes encontrar
+              especialistas con la capacidad de elaborar procedimientos
+              contables, manuales de contabilidad y verdaderos análisis
+              económicos y financieros.
             </p>
             <p className="text-gray-700 leading-relaxed mt-4">
-              Con más de 8 años de experiencia en el sector, hemos desarrollado
-              una metodología única que combina la experiencia tradicional con
-              las últimas tecnologías, garantizando precisión, eficiencia y
-              tranquilidad para nuestros clientes.
+              Especialistas Contables de primer grado en la implantación,
+              estudio y análisis de las Normas Cubanas de Contabilidad, con la
+              capacidad de depurar cuentas y enunciar medidas y trabajar en la
+              solución de los problemas contables que se presenten. Somos parte
+              de sus problemas contables y financieros, porque su necesidad es
+              nuestra responsabilidad.
             </p>
           </div>
 

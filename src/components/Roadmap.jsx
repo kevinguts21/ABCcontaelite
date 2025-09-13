@@ -31,7 +31,7 @@ const Roadmap = () => (
           .sort((a, b) => b.rating - a.rating)
           .map((item, index) => {
             const isBig = index === 0; // solo la primera es "grande"
-            const status = item.status === "done" ? "Done" : "In progress";
+            const status = item.status === "hecho" ? "Hecho" : "En progreso";
 
             return (
               <div

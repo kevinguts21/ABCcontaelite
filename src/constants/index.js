@@ -3,6 +3,8 @@ import {
   benefitIcon2,
   benefitIcon3,
   benefitIcon4,
+  benefitIcon5,
+  benefitIcon6,
   benefitImage2,
   chromecast,
   disc02,
@@ -41,7 +43,7 @@ import {
   excel,
   dujo,
   preger,
-  quintana
+  quintana,
 } from "../assets";
 
 export const navigation = [
@@ -83,7 +85,14 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [dujo, cliref, ruedas_caiman, unaicc, preger, quintana];
+export const companyLogos = [
+  dujo,
+  cliref,
+  ruedas_caiman,
+  unaicc,
+  preger,
+  quintana,
+];
 
 export const brainwaveServices = [
   "Gestión precisa",
@@ -257,7 +266,6 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-1-red-border.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
-
   },
   {
     id: "1",
@@ -266,7 +274,6 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-1-red-border.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
-    
   },
   {
     id: "2",
@@ -279,8 +286,8 @@ export const benefits = [
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Fácil Acceso",
+    text: "accede a nuestra sede fácilmente, atendemos de 8am – 4pm",
     backgroundUrl: "./src/assets/benefits/card-1-red-border.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -288,20 +295,19 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Horario Flexible",
+    text: "Nuestros especialistas y técnicos que trabajen en empresas estatales lo harán lunes, miércoles y viernes, en el horario comprendido de 8 y 30 am hasta la 1 y 30 pm",
     backgroundUrl: "./src/assets/benefits/card-1-red-border.svg",
-    iconUrl: benefitIcon1,
+    iconUrl: benefitIcon5,
     imageUrl: benefitImage2,
   },
   {
     id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Qué actividades no desarrollamos",
+    text: "Cajeros, almaceneros o dependientes de Almacén.",
     backgroundUrl: "./src/assets/benefits/card-1-red-border.svg",
-    iconUrl: benefitIcon2,
+    iconUrl: benefitIcon6,
     imageUrl: benefitImage2,
-    
   },
 ];
 
@@ -340,7 +346,6 @@ export const socials = [
     id: "5",
     title: "Gmail",
     iconUrl: gmail,
-    url: "https://mail.google.com/mail/?view=cm&fs=1&to=abccontaelite.oficial@gmail.com"
-
+    url: "https://mail.google.com/mail/?view=cm&fs=1&to=abccontaelite.oficial@gmail.com",
   },
 ];

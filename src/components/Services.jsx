@@ -54,12 +54,11 @@ const FeatureCard = ({ icon: Icon, title, description, tall, extra }) => {
           <ul className="list-disc list-inside space-y-2">
             <li>Gráficos dinámicos para seguir tu crecimiento.</li>
             <li>Filtros avanzados para comparar períodos.</li>
-            <li>Exporta en PDF o Excel con un clic.</li>
             <li>Dashboard adaptable a tu equipo.</li>
           </ul>
           <p className="mt-3 text-gray-700 font-medium">
-            Toda la información en un solo lugar para una toma de decisiones
-            más rápida y efectiva.
+            Toda la información en un solo lugar para una toma de decisiones más
+            rápida y efectiva.
           </p>
         </div>
       )}
@@ -120,12 +119,12 @@ const FeaturesSpotlight = () => {
             <FeatureCard
               icon={Calculator}
               title="Cálculos Automáticos"
-              description="Automatiza tus procesos contables y evita errores en tus balances."
+              description="cálculo de razones financieras automatizados."
             />
             <FeatureCard
               icon={FileText}
               title="Documentación Clara"
-              description="Genera reportes fiscales y contables con un solo clic."
+              description="Generación de DJ y reportes a la ONAT."
             />
           </div>
 
@@ -135,7 +134,7 @@ const FeaturesSpotlight = () => {
               tall
               icon={PieChart}
               title="Reportes Visuales"
-              description="Analiza tus ingresos, egresos y flujos de caja con gráficos claros e interactivos."
+              description="Resumen de los estados financieros con gráficos claros."
               extra
             />
           </div>
@@ -144,8 +143,8 @@ const FeaturesSpotlight = () => {
           <div className="flex flex-col gap-6">
             <FeatureCard
               icon={Shield}
-              title="Seguridad Financiera"
-              description="Protección avanzada de datos, cifrado seguro y respaldo en la nube para tu tranquilidad."
+              title="Seguridad de Datos"
+              description="Tus datos estarán protegidos bajo contrato."
             />
             <FeatureCard
               icon={TrendingUp}

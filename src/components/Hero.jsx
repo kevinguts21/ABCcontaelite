@@ -24,13 +24,13 @@ const Hero = () => {
         <div className="grid items-center gap-10 lg:grid-cols-12">
           {/* Columna izquierda */}
           <div className="lg:col-span-6 text-center lg:text-left">
-            <span className="inline-flex items-center gap-2 rounded-full border border-red-200/60 bg-red-50 px-3 py-1 text-xs font-medium text-red-700">
+            {/*<span className="inline-flex items-center gap-2 rounded-full border border-red-200/60 bg-red-50 px-3 py-1 text-xs font-medium text-red-700">
               <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
               Nuevo: artículos y recursos contables
-            </span>
+            </span> */}
 
             <h1 className="mt-5 text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl">
-              Explora las Posibilidades de Contabilidad con
+              Explora las Posibilidades contables en
               <span className="relative inline-block pl-2">
                 <span className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 bg-clip-text text-transparent">
                   {" "}
@@ -60,17 +60,17 @@ const Hero = () => {
             {/* Stats/Confianza */}
             <dl className="mt-8 grid grid-cols-3 gap-4 text-center lg:text-left">
               <div>
-                <dt className="text-xs text-gray-500">Exactitud</dt>
+                <dt className="text-xs text-gray-500">Eficiencia</dt>
                 <dd className="text-xl font-semibold text-gray-900">99.9%</dd>
               </div>
               <div>
                 <dt className="text-xs text-gray-500">Clientes</dt>
-                <dd className="text-xl font-semibold text-gray-900">+1,200</dd>
+                <dd className="text-xl font-semibold text-gray-900">+30</dd>
               </div>
               <div>
-                <dt className="text-xs text-gray-500">Ahorro fiscal</dt>
+                <dt className="text-xs text-gray-500">Experiencia</dt>
                 <dd className="text-xl font-semibold text-gray-900">
-                  hasta 30%
+                  +5 años
                 </dd>
               </div>
             </dl>

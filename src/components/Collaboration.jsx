@@ -59,7 +59,7 @@ const Collaboration = () => {
         {/* Columna izquierda */}
         <div ref={leftRef} className="max-w-[25rem] opacity-0">
           <h2 className="h2 mb-4 md:mb-8 text-black">
-            Plataforma de Contabilidad Online para tu Negocio
+            Plataforma de Contabilidad perfecta para tu Negocio
           </h2>
 
           <ul className="max-w-[22rem] mb-10 md:mb-14">
@@ -90,15 +90,17 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button>Solicitar demo gratuita</Button>
+          {/* <Button>Solicitar demo gratuita</Button> */}
         </div>
 
         {/* Columna derecha */}
         <div ref={rightRef} className="lg:ml-auto xl:w-[38rem] mt-4 opacity-0">
           <p className="body-2 mb-8 text-gray-700 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
-            Centraliza la gestión de tu empresa con una solución contable en la
-            nube. Controla ingresos, gastos, impuestos y facturación desde un
-            mismo lugar, optimizando tu tiempo y reduciendo errores.
+            Controlamos el proceso contable de tu empresa con un reconocido
+            campo de aplicaciones de uso específico para cada operación
+            contable, desde control de ingresos y gastos, hasta el control de la
+            nomina e impuestos, todo en un mismo lugar, optimizando tu tiempo y
+            reduciendo errores
           </p>
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
