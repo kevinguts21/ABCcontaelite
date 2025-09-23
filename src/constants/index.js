@@ -50,7 +50,7 @@ export const navigation = [
   {
     id: "0",
     title: "Sobre Nosotros",
-    url: "#features",
+    url: "#about",
   },
   {
     id: "1",
@@ -59,8 +59,8 @@ export const navigation = [
   },
   {
     id: "2",
-    title: "Cómo usarlo",
-    url: "#how-to-use",
+    title: "Qué hacemos",
+    url: "#services",
   },
   {
     id: "3",
@@ -225,9 +225,9 @@ export const collabApps = [
 export const pricing = [
   {
     id: "0",
-    title: "Contabilidad Esencial",
+    title: "Control de las operaciones contables mensuales",
     description: "Gestión contable básica para autónomos y pequeñas empresas",
-    // price: "0",
+    
     features: [
       "Registro y control de ingresos y gastos mensuales",
       "Elaboración de balances y estados financieros básicos",
@@ -236,9 +236,9 @@ export const pricing = [
   },
   {
     id: "1",
-    title: "Asesoría Fiscal Inteligente",
+    title: "Asesoría Fiscal",
     description: "Optimización tributaria para maximizar tus beneficios",
-    // price: "9.99",
+    
     features: [
       "Análisis personalizado de tu situación fiscal",
       "Estrategias legales para reducir tu carga impositiva",
@@ -249,7 +249,7 @@ export const pricing = [
     id: "2",
     title: "Consultoría Económica",
     description: "Apoyo estratégico para decisiones financieras clave",
-    // price: null,
+    
     features: [
       "Evaluación financiera de proyectos o inversiones",
       "Proyecciones económicas y análisis de rentabilidad",

@@ -1,35 +1,34 @@
-// Componente que muestra la lista de planes de precios
 import { check } from "../assets";
 import { pricing } from "../constants";
 
 const PricingList = () => {
-  // Simulación de precios por ID de plan
-  const precios = {
-    1: 45,
-    2: 60,
-    3: 80,
-  };
+  const precios = [
+    "30k – 50k Pesos",
+    "15k – 30k Pesos",
+    "Precio negociable",
+    3,
+  ];
 
   return (
-    <div className="flex flex-col gap-[2rem]">
+    <section className="flex flex-col gap-[2rem]">
       {/* Lista de precios */}
       <div className="flex gap-[1rem] max-lg:flex-wrap">
-        {pricing.map((item) => (
+        {pricing.map((item, index) => (
           <div
             key={item.id}
-            className="w-[19rem] max-lg:w-full min-h-[28rem] px-6 py-8 bg-white border border-gray-200 rounded-[2rem] lg:w-auto flex flex-col justify-between"
+            className="flex-1 min-w-[19rem] max-lg:w-full min-h-[30rem] px-6 py-8 bg-white border border-gray-200 rounded-[2rem] flex flex-col justify-between"
           >
             <div>
               {/* Título del plan */}
-              <h4 className="h4 mb-2 text-black">{item.title}</h4>
+              <h4 className="h4 mb-2 text-black text-center">{item.title}</h4>
 
               {/* Precio del plan */}
-              <p className="text-red-600 text-xl font-bold mb-4">
-                Desde {precios[item.id] ?? 50}$
+              <p className="text-red-600 text-xl font-bold mb-4 text-center">
+                {precios[index] ?? "Consultar"}
               </p>
 
               {/* Descripción del plan */}
-              <p className="body-2 min-h-[4rem] mb-3 text-black/70">
+              <p className="body-2 min-h-[4rem] mb-3 text-black/70 text-center">
                 {item.description}
               </p>
 
@@ -41,13 +40,15 @@ const PricingList = () => {
                     className="flex items-start py-5 border-t border-gray-200"
                   >
                     <img src={check} width={24} height={24} alt="Check" />
-                    <p className="body-2 ml-4 text-black">{feature}</p>
+                    <p className="body-2 ml-4 text-black lg:hover:text-red-600 transition-colors duration-300">
+                      {feature}
+                    </p>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Botón de acción al fondo */}
+            {/* Botón de acción al fondo 
             <button
               className="mt-6 w-full rounded-[1.3rem] bg-[#ff0400] text-white py-4 font-semibold transition-all duration-100 border-2 border-transparent hover:bg-white hover:text-[#ff0400] hover:border-[#ff0400]"
               onClick={() => {
@@ -55,7 +56,7 @@ const PricingList = () => {
               }}
             >
               Solicitar información
-            </button>
+            </button> */}
           </div>
         ))}
       </div>
@@ -75,7 +76,7 @@ const PricingList = () => {
           Contáctanos
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

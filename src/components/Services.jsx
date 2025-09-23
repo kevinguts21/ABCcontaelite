@@ -88,7 +88,7 @@ const FeaturesSpotlight = () => {
   }, []);
 
   return (
-    <section className="relative bg-[#f3ecec] py-20 overflow-hidden">
+    <section id="services" className="relative bg-[#f3ecec] py-20 overflow-hidden">
       {/* Degradado arriba */}
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-white to-transparent pointer-events-none" />
       {/* Degradado abajo */}

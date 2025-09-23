@@ -78,7 +78,7 @@ const Footer = () => {
           {/* Logo y descripción */}
           <div className="mb-6">
             <img src={abc_logo} alt="ABC Logo" width={140} height={140} />
-            <p className="mt-3 text-white/80 text-sm">
+            <p className="mt-3 text-white/80 text-base">
               Somos tu socio estratégico en servicios contables. Con más de 8
               años de experiencia, ayudamos a las mipymes a optimizar su gestión
               financiera y alcanzar sus objetivos de crecimiento.
@@ -91,7 +91,7 @@ const Footer = () => {
               <li key={item.id}>
                 <a
                   href={item.url}
-                  className="text-white hover:text-red-600 transition-colors"
+                  className="text-sm text-white hover:text-red-600 transition-colors"
                 >
                   {item.title}
                 </a>
@@ -119,31 +119,29 @@ const Footer = () => {
                 href="tel:+5354638504"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
               >
-                <Phone className="w-4 h-4 mr-2 text-red-600" />
-                +53 54638504
+                <Phone className="w-4 h-4 mr-2 text-red-600" /> +53 54638504
               </a>
               <a
                 href="tel:+5376389361"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
               >
-                <Phone className="w-4 h-4 mr-2 text-red-600" />
-                +53 76389361
+                <Phone className="w-4 h-4 mr-2 text-red-600" /> +53 76389361
               </a>
               <a
                 href="mailto:abccontaelite.oficial@gmail.com"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
               >
-                <Mail className="w-4 h-4 mr-2 text-red-600" />
+                <Mail className="w-4 h-4 mr-2 text-red-600" />{" "}
                 abccontaelite.oficial@gmail.com
               </a>
               <a
-                href="https://www.google.com/maps/place/MPM+ABC+ContaElite+Rides+S.R.L/@23.0806402,-82.3959989,19.94z/data=!4m15!1m8!3m7!1s0x88cd774cbdf600e1:0x4e294d7e1a770d60!2sLa+Habana,+Cuba!3b1!8m2!3d23.133865!4d-82.3585654!16zL20vMGQ2aG4!3m5!1s0x88cd716d3b16baf5:0x1314461f5864c245!8m2!3d23.0804998!4d-82.3961098!16s%2Fg%2F11krkwqfws?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/MPM+ABC+ContaElite+Rides+S.R.L"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
               >
-                <MapPin className="w-4 h-4 mr-2 text-red-600" />
-                123 Calle Ficticia, Habana, Cuba
+                <MapPin className="w-4 h-4 mr-2 text-red-600" /> 123 Calle
+                Ficticia, Habana, Cuba
               </a>
             </div>
           </div>
@@ -154,7 +152,7 @@ const Footer = () => {
           {/* Logo y descripción */}
           <div className="max-w-xs">
             <img src={abc_logo} alt="ABC Logo" width={140} height={140} />
-            <p className="mt-3 text-white/80 text-sm">
+            <p className="mt-3 text-white/80 text-base">
               Somos tu socio estratégico en servicios contables. Con más de 8
               años de experiencia, ayudamos a las mipymes a optimizar su gestión
               financiera y alcanzar sus objetivos de crecimiento.
@@ -168,7 +166,7 @@ const Footer = () => {
                 <li key={item.id}>
                   <a
                     href={item.url}
-                    className="text-white hover:text-red-600 transition-colors"
+                    className="text-sm text-white hover:text-red-600 transition-colors"
                   >
                     {item.title}
                   </a>
@@ -194,31 +192,29 @@ const Footer = () => {
                 href="tel:+5354638504"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
               >
-                <Phone className="w-4 h-4 mr-2 text-red-600" />
-                +53 54638504
+                <Phone className="w-4 h-4 mr-2 text-red-600" /> +53 54638504
               </a>
               <a
                 href="tel:+5376389361"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
               >
-                <Phone className="w-4 h-4 mr-2 text-red-600" />
-                +53 76389361
+                <Phone className="w-4 h-4 mr-2 text-red-600" /> +53 76389361
               </a>
               <a
                 href="mailto:abccontaelite.oficial@gmail.com"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
               >
-                <Mail className="w-4 h-4 mr-2 text-red-600" />
+                <Mail className="w-4 h-4 mr-2 text-red-600" />{" "}
                 abccontaelite.oficial@gmail.com
               </a>
               <a
-                href="https://www.google.com/maps/place/MPM+ABC+ContaElite+Rides+S.R.L/@23.0806402,-82.3959989,19.94z/data=!4m15!1m8!3m7!1s0x88cd774cbdf600e1:0x4e294d7e1a770d60!2sLa+Habana,+Cuba!3b1!8m2!3d23.133865!4d-82.3585654!16zL20vMGQ2aG4!3m5!1s0x88cd716d3b16baf5:0x1314461f5864c245!8m2!3d23.0804998!4d-82.3961098!16s%2Fg%2F11krkwqfws?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/MPM+ABC+ContaElite+Rides+S.R.L"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-sm text-white/80 hover:text-red-600 transition-colors"
               >
-                <MapPin className="w-4 h-4 mr-2 text-red-600" />
-                123 Calle Ficticia, Habana, Cuba
+                <MapPin className="w-4 h-4 mr-2 text-red-600" /> 123 Calle
+                Ficticia, Habana, Cuba
               </a>
             </div>
           </div>
@@ -242,7 +238,7 @@ const Footer = () => {
         </div>
       )}
 
-      {/* Derechos reservados con links legales */}
+      {/* Derechos reservados */}
       <div className="mt-8 text-center border-t border-white/10 pt-6">
         <p className="text-white/60 text-xs">
           © 2025{" "}
@@ -267,7 +263,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Botón scroll arriba con animación */}
+      {/* Botón scroll arriba */}
       <div
         onClick={scrollToTop}
         className="absolute bottom-4 right-6 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-700 transition animate-pulse"

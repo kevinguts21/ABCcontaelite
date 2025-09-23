@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Section from "./Section";
-import { smallSphere, abc_icon } from "../assets"; // removí stars
+import { smallSphere, abc_icon } from "../assets"; 
 import Heading from "./Heading";
 import PricingList from "./PricingList";
 import { LeftLine, RightLine } from "./design/Pricing";
@@ -65,7 +65,7 @@ const Pricing = () => {
         <div className="flex justify-center mt-8">
           <a
             className="text-[10px] font-code font-bold text-black tracking-wider uppercase border-b"
-            href="/pricing"
+            href="#pricing"
           >
             Ver todos los detalles
           </a>
